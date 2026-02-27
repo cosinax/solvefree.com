@@ -120,6 +120,7 @@ export const allCalculators: Calculator[] = [
   { title: "Steps Calculator", description: "Convert steps to distance and calories", href: "/health/steps", icon: "footprints", category: "Health" },
   { title: "Waist-to-Hip Ratio", description: "WHR cardiovascular health risk assessment", href: "/health/whr", icon: "ruler", category: "Health" },
   { title: "Height Percentile (CDC)", description: "Child height percentile from CDC growth charts", href: "/health/height-percentile", icon: "chart-bar", category: "Health" },
+  { title: "Bra Size Calculator", description: "Find your bra size from measurements and convert between US, UK, EU, FR, AU", href: "/health/bra-size", icon: "ruler", category: "Health" },
   // Conversions (13)
   { title: "Length Converter", description: "Miles, km, feet, meters, inches", href: "/conversions/length", icon: "ruler", category: "Conversions" },
   { title: "Weight Converter", description: "Pounds, kg, ounces, grams, stones", href: "/conversions/weight", icon: "scale", category: "Conversions" },

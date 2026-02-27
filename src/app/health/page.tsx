@@ -102,6 +102,7 @@ const calculators = [
   { title: "Steps Calculator", description: "Convert steps to distance and calories, or miles to steps", href: "/health/steps", icon: "👟" },
   { title: "Waist-to-Hip Ratio", description: "WHR health risk assessment per WHO guidelines", href: "/health/whr", icon: "🩺" },
   { title: "Height Percentile (CDC)", description: "Find a child's height percentile based on CDC growth charts", href: "/health/height-percentile", icon: "📊" },
+  { title: "Bra Size Calculator", description: "Find your bra size from measurements and convert between US, UK, EU, FR, AU systems", href: "/health/bra-size", icon: "👙" },
 ];
 
 export default function HealthPage() {
