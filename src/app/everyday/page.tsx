@@ -5,6 +5,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Everyday Calculators",
   description: "Free everyday calculators: GPA, grade, fuel, pizza, paint, concrete, pets, photography, and more.",
+  openGraph: {
+    title: "Everyday Calculators — SolveFree",
+    description: "Free everyday calculators: GPA, fuel, paint, concrete, pizza, pet age, photography.",
+    url: "https://solvefree.com/everyday",
+  },
+  alternates: { canonical: "https://solvefree.com/everyday" },
 };
 
 const calculators = [

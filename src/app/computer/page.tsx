@@ -5,6 +5,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Computer & Programming",
   description: "Free computer and programming tools: color converter, regex tester, JSON formatter, hash generator, and more.",
+  openGraph: {
+    title: "Developer Tools — SolveFree",
+    description: "Free developer tools: JSON formatter, regex tester, Base64, UUID, hash generator, and more.",
+    url: "https://solvefree.com/computer",
+  },
+  alternates: { canonical: "https://solvefree.com/computer" },
 };
 
 const calculators = [

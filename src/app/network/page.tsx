@@ -5,6 +5,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Network Tools",
   description: "Free networking tools: bandwidth calculator, subnet calculator, CIDR visualizer, WiFi channels, port reference, TCP throughput, and more.",
+  openGraph: {
+    title: "Network Calculators — SolveFree",
+    description: "Free network calculators: bandwidth, subnet, CIDR, WiFi, ports, and latency.",
+    url: "https://solvefree.com/network",
+  },
+  alternates: { canonical: "https://solvefree.com/network" },
 };
 
 const calculators = [

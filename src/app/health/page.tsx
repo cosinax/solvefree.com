@@ -6,6 +6,12 @@ export const metadata: Metadata = {
   title: "Health Calculators",
   description:
     "Free health calculators: BMI, TDEE, calorie, body fat, pregnancy due date, heart rate, and more.",
+  openGraph: {
+    title: "Health Calculators — SolveFree",
+    description: "Free health calculators for BMI, TDEE, calories, body fat, heart rate, and more.",
+    url: "https://solvefree.com/health",
+  },
+  alternates: { canonical: "https://solvefree.com/health" },
 };
 
 const calculators = [

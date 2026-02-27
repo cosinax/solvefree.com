@@ -6,6 +6,12 @@ export const metadata: Metadata = {
   title: "Space & Astronomy Calculators",
   description:
     "Free space and astronomy calculators: orbital period, escape velocity, rocket equation, Hohmann transfer, black holes, light travel time, and more.",
+  openGraph: {
+    title: "Space Calculators — SolveFree",
+    description: "Free space calculators: orbital mechanics, rocket equation, black holes, stellar physics.",
+    url: "https://solvefree.com/space",
+  },
+  alternates: { canonical: "https://solvefree.com/space" },
 };
 
 const calculators = [

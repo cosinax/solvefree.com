@@ -6,6 +6,12 @@ export const metadata: Metadata = {
   title: "Physics Calculators",
   description:
     "Free physics calculators: velocity, force, energy, pressure, projectile motion, pendulum, waves, gravity, half-life, ideal gas, and more.",
+  openGraph: {
+    title: "Physics Calculators — SolveFree",
+    description: "Free physics calculators: velocity, force, energy, projectile motion, waves, thermodynamics.",
+    url: "https://solvefree.com/physics",
+  },
+  alternates: { canonical: "https://solvefree.com/physics" },
 };
 
 const calculators = [

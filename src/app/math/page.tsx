@@ -6,6 +6,12 @@ export const metadata: Metadata = {
   title: "Math Calculators",
   description:
     "Free math calculators: general purpose, scientific, percentage, fraction, exponent, logarithm, and more.",
+  openGraph: {
+    title: "Math Calculators — SolveFree",
+    description: "Free math calculators for percentages, fractions, geometry, statistics, and more.",
+    url: "https://solvefree.com/math",
+  },
+  alternates: { canonical: "https://solvefree.com/math" },
 };
 
 const calculators = [

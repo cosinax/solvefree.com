@@ -6,6 +6,12 @@ export const metadata: Metadata = {
   title: "Unit Converters",
   description:
     "Free unit converters: length, weight, temperature, speed, area, volume, data, time, and more.",
+  openGraph: {
+    title: "Unit Converters — SolveFree",
+    description: "Free unit converters for length, weight, temperature, speed, area, volume, and more.",
+    url: "https://solvefree.com/conversions",
+  },
+  alternates: { canonical: "https://solvefree.com/conversions" },
 };
 
 const calculators = [

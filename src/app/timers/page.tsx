@@ -6,6 +6,12 @@ export const metadata: Metadata = {
   title: "Timers & Clocks",
   description:
     "Free online timers: countdown timer, stopwatch, Pomodoro timer, world clock, date calculator, and more.",
+  openGraph: {
+    title: "Timers & Clocks — SolveFree",
+    description: "Free timers and clocks: stopwatch, Pomodoro, world clock, date calculator, countdown.",
+    url: "https://solvefree.com/timers",
+  },
+  alternates: { canonical: "https://solvefree.com/timers" },
 };
 
 const calculators = [

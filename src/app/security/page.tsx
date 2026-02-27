@@ -5,6 +5,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Security Tools",
   description: "Free security tools: password strength checker, entropy calculator, JWT decoder, hash identifier, bcrypt cost estimator, and more.",
+  openGraph: {
+    title: "Security Tools — SolveFree",
+    description: "Free security tools: password strength, JWT decoder, entropy, hash comparison.",
+    url: "https://solvefree.com/security",
+  },
+  alternates: { canonical: "https://solvefree.com/security" },
 };
 
 const calculators = [
