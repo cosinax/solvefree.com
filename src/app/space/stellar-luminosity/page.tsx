@@ -125,6 +125,82 @@ export default function StellarLuminosityPage() {
         {result && (
           <div className="mt-4 p-4 bg-card rounded-xl border border-card-border space-y-2">
             <div className="text-sm text-muted mb-1">Stellar Properties</div>
+            {/* Star visualization */}
+            {v.mode === "TR" && !isNaN(result.T_K) && (() => {
+              const T = result.T_K;
+              // Blackbody color approximation
+              let starColor = "#ffffff";
+              if (T >= 30000) starColor = "#9bb0ff";
+              else if (T >= 10000) starColor = "#aabfff";
+              else if (T >= 7500) starColor = "#cad7ff";
+              else if (T >= 6000) starColor = "#f8f7ff";
+              else if (T >= 5200) starColor = "#fff4e8";
+              else if (T >= 3700) starColor = "#ffd2a1";
+              else starColor = "#ffad51";
+              const size = Math.min(Math.max(Math.log10(result.R_solar + 1) * 40 + 10, 8), 80);
+              return (
+                <div className="flex items-center gap-4 py-3 px-2">
+                  <div className="relative flex items-center justify-center shrink-0" style={{ width: 100, height: 100 }}>
+                    <div
+                      className="rounded-full"
+                      style={{
+                        width: size, height: size,
+                        backgroundColor: starColor,
+                        boxShadow: `0 0 ${size}px ${size / 2}px ${starColor}88`,
+                      }}
+                    />
+                  </div>
+                  <div className="flex-1 text-xs space-y-1">
+                    <p className="font-semibold">{spectralClass(T)}</p>
+                    <p className="text-muted">T = {fmt(T)} K</p>
+                    <p className="text-muted">R = {fmt(result.R_solar)} R☉</p>
+                    <p className="text-muted">L = {fmt(result.L_solar)} L☉</p>
+                  </div>
+                </div>
+              );
+            })()}
+            {/* Habitable zone visualization */}
+            {(() => {
+              const inner = result.hz_inner;
+              const outer = result.hz_outer;
+              const earthAU = 1.0;
+              const max = Math.max(outer * 1.3, 2);
+              const svgW = 320, svgH = 60;
+              const toX = (au: number) => (au / max) * (svgW - 20) + 10;
+              return (
+                <div>
+                  <div className="text-xs text-muted mb-1 font-semibold">Habitable Zone</div>
+                  <svg width="100%" viewBox={`0 0 ${svgW} ${svgH}`} className="overflow-visible">
+                    {/* Star at left */}
+                    <circle cx={10} cy={svgH / 2} r={6} fill="#fbbf24" />
+                    {/* Distance line */}
+                    <line x1={10} y1={svgH / 2} x2={svgW - 10} y2={svgH / 2} stroke="currentColor" strokeWidth={1} className="text-card-border" opacity={0.3} />
+                    {/* HZ band */}
+                    <rect
+                      x={toX(inner)} y={svgH / 2 - 10}
+                      width={toX(outer) - toX(inner)} height={20}
+                      fill="#22c55e" opacity={0.3} rx={4}
+                    />
+                    <rect
+                      x={toX(inner)} y={svgH / 2 - 10}
+                      width={toX(outer) - toX(inner)} height={20}
+                      fill="none" stroke="#22c55e" strokeWidth={1} rx={4}
+                    />
+                    {/* Earth marker */}
+                    {earthAU <= max && (
+                      <>
+                        <line x1={toX(earthAU)} y1={svgH / 2 - 14} x2={toX(earthAU)} y2={svgH / 2 + 14} stroke="#3b82f6" strokeWidth={1.5} strokeDasharray="3,2" />
+                        <text x={toX(earthAU)} y={svgH / 2 - 16} textAnchor="middle" fontSize={8} fill="#3b82f6">Earth</text>
+                      </>
+                    )}
+                    {/* HZ labels */}
+                    <text x={toX(inner)} y={svgH - 4} textAnchor="middle" fontSize={8} fill="#22c55e">{fmt(inner, 3)} AU</text>
+                    <text x={toX(outer)} y={svgH - 4} textAnchor="middle" fontSize={8} fill="#22c55e">{fmt(outer, 3)} AU</text>
+                    <text x={toX(inner) + (toX(outer) - toX(inner)) / 2} y={svgH / 2 + 4} textAnchor="middle" fontSize={8} fill="#16a34a" fontWeight="bold">HZ</text>
+                  </svg>
+                </div>
+              );
+            })()}
             <div className="bg-primary-light rounded-lg p-3 text-center mb-2">
               <span className="text-xs text-muted block">Luminosity</span>
               <span className="text-2xl font-bold font-mono text-primary">{fmt(result.L_solar)} L☉</span>

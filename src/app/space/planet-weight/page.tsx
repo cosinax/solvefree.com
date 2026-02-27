@@ -79,6 +79,43 @@ export default function PlanetWeightPage() {
             </div>
 
             <div className="text-sm text-muted mb-1">Weight on other worlds</div>
+            {/* Visual bar chart */}
+            <div className="space-y-1.5 py-2">
+              {WORLDS.map(w => {
+                const wN = weightKg * w.g;
+                const wLocal = v.weightUnit === "kg" ? wN / EARTH_G : (wN / EARTH_G) / 0.453592;
+                const maxVal = v.weightUnit === "kg" ? weightKg * (274 / EARTH_G) : rawWeight * (274 / EARTH_G);
+                const pct = (wLocal / maxVal) * 100;
+                const color = w.g > EARTH_G * 1.5 ? "#f97316" : w.g > EARTH_G * 0.8 ? "#3b82f6" : "#8b5cf6";
+                return (
+                  <div key={w.name} className="flex items-center gap-2 text-xs">
+                    <span className="w-20 text-right font-mono shrink-0">{w.emoji} {w.name}</span>
+                    <div className="flex-1 h-4 bg-card-border rounded-full overflow-hidden">
+                      <div
+                        className="h-full rounded-full transition-all duration-300"
+                        style={{ width: `${Math.max(pct, 1)}%`, backgroundColor: color }}
+                      />
+                    </div>
+                    <span className="w-20 font-mono font-semibold shrink-0 text-right">{fmt(wLocal)}</span>
+                  </div>
+                );
+              })}
+              {(() => {
+                const earthLocal = v.weightUnit === "kg" ? weightKg : rawWeight;
+                const maxVal = v.weightUnit === "kg" ? weightKg * (274 / EARTH_G) : rawWeight * (274 / EARTH_G);
+                const pct = (earthLocal / maxVal) * 100;
+                return (
+                  <div className="flex items-center gap-2 text-xs border-t border-card-border pt-2 mt-1">
+                    <span className="w-20 text-right font-mono shrink-0 text-primary font-semibold">🌍 Earth</span>
+                    <div className="flex-1 h-4 bg-primary/20 rounded-full overflow-hidden">
+                      <div className="h-full bg-primary rounded-full" style={{ width: `${Math.max(pct, 1)}%` }} />
+                    </div>
+                    <span className="w-20 font-mono font-semibold shrink-0 text-right text-primary">{fmt(earthLocal)}</span>
+                  </div>
+                );
+              })()}
+            </div>
+
             <div className="overflow-x-auto rounded-lg border border-card-border">
               <table className="w-full text-sm font-mono">
                 <thead>

@@ -89,6 +89,12 @@ const calculators = [
     href: "/space/angular-size",
     icon: "🔭",
   },
+  {
+    title: "Solar System Explorer",
+    description: "Interactive visualization of planet sizes, distances, and orbital data",
+    href: "/space/solar-system",
+    icon: "🌞",
+  },
 ];
 
 export default function SpacePage() {

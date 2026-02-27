@@ -294,6 +294,7 @@ export const allCalculators: Calculator[] = [
   { title: "Orbital Speed", description: "Circular orbital velocity at any altitude around any body", href: "/space/orbital-speed", icon: "fast-forward", category: "Space" },
   { title: "Delta-V Budget", description: "Stack mission maneuvers and estimate total Δv requirements", href: "/space/delta-v-budget", icon: "list-ordered", category: "Space" },
   { title: "Angular Size", description: "Angular size of objects by physical size and distance", href: "/space/angular-size", icon: "eye", category: "Space" },
+  { title: "Solar System Explorer", description: "Interactive visualization of planet sizes, distances, and orbital data", href: "/space/solar-system", icon: "sun", category: "Space" },
   // Math - Geometry additions
   { title: "Cylinder Calculator", description: "Volume, surface area, and lateral area of a cylinder", href: "/math/cylinder", icon: "cylinder", category: "Math" },
   { title: "Sphere Calculator", description: "Volume, surface area, and great circle from any measurement", href: "/math/sphere", icon: "globe", category: "Math" },

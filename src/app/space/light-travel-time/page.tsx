@@ -142,6 +142,50 @@ export default function LightTravelTimePage() {
           </div>
         )}
 
+        {/* Scale visualization */}
+        {!error && dist_km > 0 && (
+          <div className="p-4 bg-card rounded-xl border border-card-border">
+            <div className="text-xs text-muted mb-3">Scale: your distance vs. famous references (log scale)</div>
+            <div className="space-y-2">
+              {(() => {
+                const references = [
+                  { label: "Moon", km: 384400, color: "#9ca3af" },
+                  { label: "Sun (1 AU)", km: 1.496e8, color: "#fbbf24" },
+                  { label: "Mars (avg)", km: 2.25e8, color: "#ef4444" },
+                  { label: "Jupiter (avg)", km: 6.28e8, color: "#f97316" },
+                  { label: "Pluto (avg)", km: 5.9e9, color: "#8b5cf6" },
+                  { label: "α Cen", km: 4.01e13, color: "#3b82f6" },
+                ];
+                // Include user's distance
+                const allKms = [...references.map(r => r.km), dist_km];
+                const logMax = Math.log10(Math.max(...allKms));
+                const logMin = Math.log10(Math.min(...allKms));
+                const pct = (km: number) => ((Math.log10(km) - logMin) / (logMax - logMin)) * 95 + 2;
+                return (
+                  <>
+                    {references.map(r => (
+                      <div key={r.label} className="flex items-center gap-2 text-xs">
+                        <span className="w-24 text-right text-muted shrink-0">{r.label}</span>
+                        <div className="flex-1 h-3 bg-background border border-card-border rounded-full overflow-hidden relative">
+                          <div className="h-full rounded-full opacity-60" style={{ width: `${pct(r.km)}%`, backgroundColor: r.color }} />
+                        </div>
+                        <span className="w-20 text-right font-mono text-muted shrink-0">{fmtTime(r.km / C_KMS)}</span>
+                      </div>
+                    ))}
+                    <div className="flex items-center gap-2 text-xs border-t border-card-border pt-2">
+                      <span className="w-24 text-right font-semibold text-primary shrink-0">Your dist</span>
+                      <div className="flex-1 h-3 bg-background border border-primary/30 rounded-full overflow-hidden relative">
+                        <div className="h-full bg-primary rounded-full" style={{ width: `${pct(dist_km)}%` }} />
+                      </div>
+                      <span className="w-20 text-right font-mono font-semibold text-primary shrink-0">{fmtTime(lightTime_s)}</span>
+                    </div>
+                  </>
+                );
+              })()}
+            </div>
+          </div>
+        )}
+
         {/* Famous distances */}
         <div>
           <p className="text-xs text-muted mb-1 mt-2">Famous distances:</p>

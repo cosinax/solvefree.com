@@ -154,6 +154,42 @@ export default function OrbitalPeriodPage() {
 
         {result && (
           <div className="mt-4 p-4 bg-card rounded-xl border border-card-border space-y-2">
+            {/* Orbit visualization */}
+            {(() => {
+              const a_km = result.a_km;
+              const cx = 80, cy = 80, maxR = 70;
+              // Compare to known orbits for scale
+              const refOrbits = [
+                { name: "ISS", a: 6778, color: "#6b7280" },
+                { name: "Moon", a: 384400, color: "#9ca3af" },
+                { name: "Earth", a: 149597870.7, color: "#3b82f6" },
+                { name: "Mars", a: 227940000, color: "#ef4444" },
+              ];
+              const allOrbits = [...refOrbits, { name: "Current", a: a_km, color: "#f59e0b" }];
+              const maxA = Math.max(...allOrbits.map(o => o.a));
+              const toR = (a: number) => Math.max((a / maxA) * maxR, 2);
+              return (
+                <div className="flex justify-center py-2">
+                  <svg width={160} height={160} viewBox="0 0 160 160">
+                    {/* Central body */}
+                    <circle cx={cx} cy={cy} r={6} fill="#fbbf24" />
+                    {/* Reference orbits */}
+                    {refOrbits.map(o => (
+                      <circle key={o.name} cx={cx} cy={cy} r={toR(o.a)} fill="none" stroke={o.color} strokeWidth={0.5} strokeDasharray="2,3" opacity={0.5} />
+                    ))}
+                    {/* Current orbit */}
+                    <circle cx={cx} cy={cy} r={toR(a_km)} fill="none" stroke="#f59e0b" strokeWidth={2} />
+                    {/* Satellite dot */}
+                    <circle cx={cx + toR(a_km)} cy={cy} r={3} fill="#f59e0b" />
+                    {/* Labels */}
+                    {refOrbits.filter(o => toR(o.a) > 8).map(o => (
+                      <text key={o.name} x={cx + toR(o.a) + 2} y={cy - 2} fontSize={6} fill={o.color} opacity={0.7}>{o.name}</text>
+                    ))}
+                    <text x={cx + toR(a_km) + 2} y={cy + 4} fontSize={7} fill="#f59e0b" fontWeight="bold">← orbit</text>
+                  </svg>
+                </div>
+              );
+            })()}
             {v.mode === "aToT" ? (
               <>
                 <div className="text-sm text-muted mb-1">Orbital Period</div>
