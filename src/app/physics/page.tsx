@@ -105,6 +105,8 @@ const calculators = [
   { title: "Momentum Calculator", description: "Momentum, kinetic energy, and inelastic collisions", href: "/physics/momentum", icon: "💥" },
   { title: "Torque Calculator", description: "τ = F × r × sin(θ) — solve for torque, force, or moment arm", href: "/physics/torque", icon: "🔩" },
   { title: "Buoyancy Calculator", description: "Buoyant force and whether an object floats or sinks", href: "/physics/buoyancy", icon: "🛟" },
+  { title: "Hooke's Law", description: "F = kx — spring force, constant, or displacement", href: "/physics/hookes-law", icon: "🌀" },
+  { title: "Thin Lens / Mirror", description: "1/f = 1/do + 1/di — image distance, magnification, type", href: "/physics/thin-lens", icon: "🔭" },
 ];
 
 export default function PhysicsPage() {

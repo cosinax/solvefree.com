@@ -28,6 +28,8 @@ const categories = [
   { title: "Physics", description: "Velocity, force, energy, projectile motion, waves, thermodynamics", href: "/physics", icon: "atom" },
   { title: "RF & Antenna", description: "Wavelength, path loss, VSWR, link budget, dBm, coax, noise figure", href: "/rf", icon: "radio" },
   { title: "Space", description: "Orbital mechanics, rocket equation, black holes, stellar physics", href: "/space", icon: "globe" },
+  { title: "Statistics", description: "Normal distribution, confidence intervals, probability, z-scores", href: "/statistics", icon: "chart-bar" },
+  { title: "Geometry", description: "Triangles, circles, polygons, arc length, slope, and 2D shapes", href: "/geometry", icon: "triangle" },
 ];
 
 export default function HomePage() {

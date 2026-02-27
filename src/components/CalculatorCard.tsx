@@ -4,6 +4,8 @@ import { Calculator, Hash, Percent, DivideSquare, Sigma, BarChart3, TrendingUp, 
   AlarmClock, Ampersand, Atom, Baby, Banknote, BookOpen, BrainCircuit, Building2, Cable, CalendarClock, ChartBar, Circle, CircleDashed, Clock4, Cpu, Dice5, Dices, Dumbbell, Egg, Eye, FastForward, FileCode, FileDiff, FunctionSquare, Globe2, Grid2X2, HandCoins, Info, KeyRound, Keyboard, Landmark, Layers, LayoutGrid, ListOrdered, LockKeyhole, Network, Orbit, PartyPopper, Pilcrow, Radical, RadioTower, ReceiptText, Rocket, Satellite, Scale3d, Scan, ScatterChart, SearchCode, Server, Settings, ShieldCheck, Signal, Sliders, Star, Subscript, Superscript, Table, Terminal, TrendingDown, Users, Utensils, Wallet, Wifi, XSquare, ZapOff,
   // Geometry & construction icons
   Box, Cylinder, Square, House, Columns3,
+  // Statistics & geometry icons
+  Hexagon, Dice6,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -102,6 +104,9 @@ const iconMap: Record<string, LucideIcon> = {
   square: Square,
   house: House,
   "columns-3": Columns3,
+  hexagon: Hexagon,
+  dice: Dice6,
+  "dice-6": Dice6,
 };
 
 interface CalculatorCardProps {

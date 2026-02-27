@@ -1,219 +1,125 @@
 "use client";
 import { CalculatorShell } from "@/components/CalculatorShell";
 import { useHashState } from "@/hooks/useHashState";
+import { useMemo } from "react";
 
-const ic = "w-full px-3 py-2.5 font-mono bg-background border border-card-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary";
-const sc = "w-full px-3 py-2 font-mono bg-background border border-card-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm";
+const inp = "w-full px-3 py-2.5 font-mono bg-background border border-card-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm";
+const R_GAS = 8.314; // J/(mol·K)
 
-const R = 8.314; // J/(mol·K)
-
-function toPa(val: number, unit: string): number {
-  switch (unit) {
-    case "atm": return val * 101325;
-    case "bar": return val * 100000;
-    case "psi": return val * 6894.76;
-    default: return val; // Pa
-  }
-}
-function fromPa(val: number, unit: string): number {
-  switch (unit) {
-    case "atm": return val / 101325;
-    case "bar": return val / 100000;
-    case "psi": return val / 6894.76;
-    default: return val;
-  }
-}
-function toM3(val: number, unit: string): number {
-  return unit === "L" ? val / 1000 : val;
-}
-function fromM3(val: number, unit: string): number {
-  return unit === "L" ? val * 1000 : val;
-}
-function toK(val: number, unit: string): number {
-  if (unit === "C") return val + 273.15;
-  if (unit === "F") return (val - 32) * 5 / 9 + 273.15;
-  return val;
-}
-function fromK(val: number, unit: string): number {
-  if (unit === "C") return val - 273.15;
-  if (unit === "F") return (val - 273.15) * 9 / 5 + 32;
-  return val;
+function fmt(n: number, d = 5): string {
+  if (!isFinite(n) || isNaN(n)) return "—";
+  const abs = Math.abs(n);
+  if (abs >= 1e6 || (abs < 0.001 && abs > 0)) return n.toExponential(4);
+  return parseFloat(n.toPrecision(d)).toString();
 }
 
 export default function IdealGasPage() {
   const [v, setV] = useHashState({
-    solveFor: "pressure",
-    pressure: "",
-    volume: "",
-    moles: "",
-    temperature: "",
-    pUnit: "Pa",
-    vUnit: "L",
-    tUnit: "K",
-    // Combined gas law
-    p1: "", v1: "", t1: "",
-    p2: "", v2: "", t2: "",
-    solveCombined: "p2",
-    cUnit: "atm",
-    cvUnit: "L",
-    ctUnit: "K",
+    mode: "P",
+    P: "101325", Punit: "Pa",
+    V: "0.0224", Vunit: "m3",
+    n: "1",
+    T: "273.15", Tunit: "K",
   });
 
-  const P = parseFloat(v.pressure);
-  const V = parseFloat(v.volume);
-  const n = parseFloat(v.moles);
-  const T = parseFloat(v.temperature);
+  const P_UNITS: Record<string, number> = { Pa: 1, kPa: 1e3, MPa: 1e6, atm: 101325, bar: 1e5, psi: 6894.76, mmHg: 133.322 };
+  const V_UNITS: Record<string, number> = { m3: 1, L: 0.001, mL: 1e-6, ft3: 0.0283168 };
 
-  const PPa = !isNaN(P) ? toPa(P, v.pUnit) : NaN;
-  const VM3 = !isNaN(V) ? toM3(V, v.vUnit) : NaN;
-  const TK = !isNaN(T) ? toK(T, v.tUnit) : NaN;
+  const result = useMemo(() => {
+    const toKelvin = (t: number, unit: string) =>
+      unit === "K" ? t : unit === "C" ? t + 273.15 : (t + 459.67) * 5 / 9;
 
-  let result: number | null = null;
-  let resultLabel = "";
-  let resultUnit = "";
+    const P_Pa = parseFloat(v.P) * (P_UNITS[v.Punit] ?? 1);
+    const V_m3 = parseFloat(v.V) * (V_UNITS[v.Vunit] ?? 1);
+    const n = parseFloat(v.n);
+    const T_K = toKelvin(parseFloat(v.T), v.Tunit);
 
-  if (v.solveFor === "pressure" && !isNaN(n) && !isNaN(VM3) && VM3 > 0 && !isNaN(TK)) {
-    const Pa = n * R * TK / VM3;
-    result = parseFloat(fromPa(Pa, v.pUnit).toPrecision(5));
-    resultLabel = "Pressure";
-    resultUnit = v.pUnit;
-  } else if (v.solveFor === "volume" && !isNaN(PPa) && !isNaN(n) && !isNaN(TK) && PPa > 0) {
-    const m3 = n * R * TK / PPa;
-    result = parseFloat(fromM3(m3, v.vUnit).toPrecision(5));
-    resultLabel = "Volume";
-    resultUnit = v.vUnit;
-  } else if (v.solveFor === "moles" && !isNaN(PPa) && !isNaN(VM3) && !isNaN(TK) && TK > 0) {
-    result = parseFloat((PPa * VM3 / (R * TK)).toPrecision(5));
-    resultLabel = "Moles";
-    resultUnit = "mol";
-  } else if (v.solveFor === "temperature" && !isNaN(PPa) && !isNaN(VM3) && !isNaN(n) && n > 0) {
-    const Kelvin = PPa * VM3 / (n * R);
-    result = parseFloat(fromK(Kelvin, v.tUnit).toPrecision(5));
-    resultLabel = "Temperature";
-    resultUnit = v.tUnit === "K" ? "K" : v.tUnit === "C" ? "°C" : "°F";
-  }
-
-  // Combined gas law
-  const p1 = parseFloat(v.p1), V1 = parseFloat(v.v1), T1K = !isNaN(parseFloat(v.t1)) ? toK(parseFloat(v.t1), v.ctUnit) : NaN;
-  const p2 = parseFloat(v.p2), V2 = parseFloat(v.v2), T2K = !isNaN(parseFloat(v.t2)) ? toK(parseFloat(v.t2), v.ctUnit) : NaN;
-
-  let combinedResult: number | null = null;
-  const sc2 = v.solveCombined;
-  if (sc2 === "p2" && !isNaN(p1) && !isNaN(V1) && !isNaN(T1K) && !isNaN(V2) && !isNaN(T2K) && V2 > 0 && T1K > 0) {
-    combinedResult = parseFloat((p1 * V1 * T2K / (T1K * V2)).toPrecision(5));
-  } else if (sc2 === "v2" && !isNaN(p1) && !isNaN(V1) && !isNaN(T1K) && !isNaN(p2) && !isNaN(T2K) && p2 > 0 && T1K > 0) {
-    combinedResult = parseFloat((p1 * V1 * T2K / (T1K * p2)).toPrecision(5));
-  } else if (sc2 === "t2" && !isNaN(p1) && !isNaN(V1) && !isNaN(T1K) && !isNaN(p2) && !isNaN(V2) && p1 > 0 && V1 > 0) {
-    const T2raw = p2 * V2 * T1K / (p1 * V1);
-    combinedResult = parseFloat(fromK(T2raw, v.ctUnit).toPrecision(5));
-  }
+    if (v.mode === "P") {
+      if (!isFinite(V_m3) || !isFinite(n) || !isFinite(T_K) || V_m3 <= 0 || n <= 0 || T_K <= 0) return null;
+      const P = n * R_GAS * T_K / V_m3;
+      return { label: "Pressure", value: `${fmt(P)} Pa`, extra: `${fmt(P / 1e3)} kPa · ${fmt(P / 101325)} atm` };
+    } else if (v.mode === "V") {
+      if (!isFinite(P_Pa) || !isFinite(n) || !isFinite(T_K) || P_Pa <= 0 || n <= 0 || T_K <= 0) return null;
+      const V = n * R_GAS * T_K / P_Pa;
+      return { label: "Volume", value: `${fmt(V)} m³`, extra: `${fmt(V * 1000)} L` };
+    } else if (v.mode === "n") {
+      if (!isFinite(P_Pa) || !isFinite(V_m3) || !isFinite(T_K) || P_Pa <= 0 || V_m3 <= 0 || T_K <= 0) return null;
+      const mol = P_Pa * V_m3 / (R_GAS * T_K);
+      return { label: "Amount", value: `${fmt(mol)} mol`, extra: `${fmt(mol * 28.97)} g (if air)` };
+    } else {
+      if (!isFinite(P_Pa) || !isFinite(V_m3) || !isFinite(n) || P_Pa <= 0 || V_m3 <= 0 || n <= 0) return null;
+      const T = P_Pa * V_m3 / (n * R_GAS);
+      return { label: "Temperature", value: `${fmt(T)} K`, extra: `${fmt(T - 273.15)}°C · ${fmt(T * 9 / 5 - 459.67)}°F` };
+    }
+  }, [v]);
 
   return (
-    <CalculatorShell
-      title="Ideal Gas Law Calculator"
-      description="PV = nRT — solve for pressure, volume, moles, or temperature. Also includes the combined gas law."
-    >
-      <div className="space-y-6">
-        {/* PV = nRT */}
-        <div className="border border-card-border rounded-xl p-4 space-y-4">
-          <h3 className="text-sm font-semibold">PV = nRT &nbsp;·&nbsp; R = 8.314 J/(mol·K)</h3>
-          <div>
-            <label className="block text-xs text-muted mb-1">Solve for</label>
-            <select value={v.solveFor} onChange={e => setV({ solveFor: e.target.value })} className={sc}>
-              <option value="pressure">Pressure (P)</option>
-              <option value="volume">Volume (V)</option>
-              <option value="moles">Moles (n)</option>
-              <option value="temperature">Temperature (T)</option>
-            </select>
+    <CalculatorShell title="Ideal Gas Law Calculator" description="PV = nRT — find pressure, volume, moles, or temperature.">
+      <div className="space-y-4">
+        <div>
+          <label className="block text-xs text-muted mb-1">Solve for</label>
+          <div className="flex flex-wrap gap-2">
+            {[{ k: "P", l: "Pressure (P)" }, { k: "V", l: "Volume (V)" }, { k: "n", l: "Moles (n)" }, { k: "T", l: "Temp (T)" }].map(m => (
+              <button key={m.k} onClick={() => setV({ mode: m.k })}
+                className={`px-3 py-1.5 text-xs rounded-lg border transition-colors ${v.mode === m.k ? "bg-primary text-white border-primary" : "bg-card border-card-border hover:bg-primary-light"}`}>
+                {m.l}
+              </button>
+            ))}
           </div>
+        </div>
 
-          {v.solveFor !== "pressure" && (
+        <div className="grid grid-cols-1 gap-3">
+          {v.mode !== "P" && (
             <div>
               <label className="block text-xs text-muted mb-1">Pressure</label>
               <div className="flex gap-2">
-                <input type="number" value={v.pressure} onChange={e => setV({ pressure: e.target.value })} placeholder="e.g. 101325" className={ic} />
-                <select value={v.pUnit} onChange={e => setV({ pUnit: e.target.value })} className="px-2 py-2 bg-background border border-card-border rounded-lg text-sm">
-                  <option>Pa</option><option>atm</option><option>bar</option><option>psi</option>
+                <input type="number" value={v.P} onChange={e => setV({ P: e.target.value })} className={inp} min="0" step="any" />
+                <select value={v.Punit} onChange={e => setV({ Punit: e.target.value })} className="px-2 py-2 text-xs bg-background border border-card-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                  {Object.keys(P_UNITS).map(u => <option key={u} value={u}>{u}</option>)}
                 </select>
               </div>
             </div>
           )}
-          {v.solveFor !== "volume" && (
+          {v.mode !== "V" && (
             <div>
               <label className="block text-xs text-muted mb-1">Volume</label>
               <div className="flex gap-2">
-                <input type="number" value={v.volume} onChange={e => setV({ volume: e.target.value })} placeholder="e.g. 22.4" className={ic} />
-                <select value={v.vUnit} onChange={e => setV({ vUnit: e.target.value })} className="px-2 py-2 bg-background border border-card-border rounded-lg text-sm">
-                  <option>L</option><option>m3</option>
+                <input type="number" value={v.V} onChange={e => setV({ V: e.target.value })} className={inp} min="0" step="any" />
+                <select value={v.Vunit} onChange={e => setV({ Vunit: e.target.value })} className="px-2 py-2 text-xs bg-background border border-card-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                  {Object.keys(V_UNITS).map(u => <option key={u} value={u}>{u}</option>)}
                 </select>
               </div>
             </div>
           )}
-          {v.solveFor !== "moles" && (
+          {v.mode !== "n" && (
             <div>
               <label className="block text-xs text-muted mb-1">Moles (n)</label>
-              <input type="number" value={v.moles} onChange={e => setV({ moles: e.target.value })} placeholder="e.g. 1" className={ic} />
+              <input type="number" value={v.n} onChange={e => setV({ n: e.target.value })} className={inp} min="0" step="any" />
             </div>
           )}
-          {v.solveFor !== "temperature" && (
+          {v.mode !== "T" && (
             <div>
               <label className="block text-xs text-muted mb-1">Temperature</label>
               <div className="flex gap-2">
-                <input type="number" value={v.temperature} onChange={e => setV({ temperature: e.target.value })} placeholder="e.g. 273.15" className={ic} />
-                <select value={v.tUnit} onChange={e => setV({ tUnit: e.target.value })} className="px-2 py-2 bg-background border border-card-border rounded-lg text-sm">
-                  <option>K</option><option value="C">°C</option><option value="F">°F</option>
+                <input type="number" value={v.T} onChange={e => setV({ T: e.target.value })} className={inp} step="any" />
+                <select value={v.Tunit} onChange={e => setV({ Tunit: e.target.value })} className="px-2 py-2 text-xs bg-background border border-card-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                  {["K", "C", "F"].map(u => <option key={u} value={u}>{u}</option>)}
                 </select>
               </div>
             </div>
           )}
-          {v.solveFor === "pressure" && (
-            <div>
-              <label className="block text-xs text-muted mb-1">Output unit</label>
-              <select value={v.pUnit} onChange={e => setV({ pUnit: e.target.value })} className={sc}>
-                <option>Pa</option><option>atm</option><option>bar</option><option>psi</option>
-              </select>
-            </div>
-          )}
-
-          {result !== null && (
-            <div className="bg-primary-light rounded-xl p-4 text-center">
-              <span className="block text-xs text-muted mb-1">{resultLabel}</span>
-              <span className="block font-mono font-bold text-4xl text-primary">{result} {resultUnit}</span>
-            </div>
-          )}
         </div>
 
-        {/* Combined gas law */}
-        <div className="border border-card-border rounded-xl p-4 space-y-3">
-          <h3 className="text-sm font-semibold">Combined Gas Law — P₁V₁/T₁ = P₂V₂/T₂</h3>
-          <div>
-            <label className="block text-xs text-muted mb-1">Solve for</label>
-            <select value={v.solveCombined} onChange={e => setV({ solveCombined: e.target.value })} className={sc}>
-              <option value="p2">P₂</option>
-              <option value="v2">V₂</option>
-              <option value="t2">T₂</option>
-            </select>
-          </div>
-          <p className="text-xs text-muted">State 1:</p>
-          <div className="grid grid-cols-3 gap-2">
-            <div><label className="block text-xs text-muted mb-1">P₁</label><input type="number" value={v.p1} onChange={e => setV({ p1: e.target.value })} placeholder="P₁" className={ic} /></div>
-            <div><label className="block text-xs text-muted mb-1">V₁</label><input type="number" value={v.v1} onChange={e => setV({ v1: e.target.value })} placeholder="V₁" className={ic} /></div>
-            <div><label className="block text-xs text-muted mb-1">T₁</label><input type="number" value={v.t1} onChange={e => setV({ t1: e.target.value })} placeholder="T₁" className={ic} /></div>
-          </div>
-          <p className="text-xs text-muted">State 2 (enter known values, leave unknown blank):</p>
-          <div className="grid grid-cols-3 gap-2">
-            <div><label className="block text-xs text-muted mb-1">P₂</label><input type="number" value={v.p2} onChange={e => setV({ p2: e.target.value })} placeholder="P₂" className={ic} disabled={v.solveCombined === "p2"} /></div>
-            <div><label className="block text-xs text-muted mb-1">V₂</label><input type="number" value={v.v2} onChange={e => setV({ v2: e.target.value })} placeholder="V₂" className={ic} disabled={v.solveCombined === "v2"} /></div>
-            <div><label className="block text-xs text-muted mb-1">T₂</label><input type="number" value={v.t2} onChange={e => setV({ t2: e.target.value })} placeholder="T₂" className={ic} disabled={v.solveCombined === "t2"} /></div>
-          </div>
-          <p className="text-xs text-muted">Pressure unit: {v.cUnit} · Volume: {v.cvUnit} · Temp: {v.ctUnit}</p>
-          {combinedResult !== null && (
-            <div className="bg-primary-light rounded-xl p-3 text-center">
-              <span className="block text-xs text-muted mb-1">{v.solveCombined === "p2" ? "P₂" : v.solveCombined === "v2" ? "V₂" : "T₂"}</span>
-              <span className="block font-mono font-bold text-3xl text-primary">{combinedResult}</span>
+        {result && (
+          <div className="space-y-3">
+            <div className="p-4 bg-primary-light border border-primary/20 rounded-lg text-center">
+              <div className="text-xs text-muted mb-1">{result.label}</div>
+              <div className="font-mono font-bold text-2xl text-primary">{result.value}</div>
+              {result.extra && <div className="text-xs text-muted mt-1">{result.extra}</div>}
             </div>
-          )}
-        </div>
+            <p className="text-xs text-muted">PV = nRT · R = 8.314 J/(mol·K). Valid for ideal (non-interacting) gas molecules.</p>
+          </div>
+        )}
       </div>
     </CalculatorShell>
   );

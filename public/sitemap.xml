@@ -97,6 +97,18 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://solvefree.com/statistics</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/geometry</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://solvefree.com/math/general</loc>
     <lastmod>2026-02-27</lastmod>
     <priority>0.7</priority>
@@ -752,6 +764,12 @@
   </url>
   <url>
     <loc>https://solvefree.com/health/height-percentile</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/health/bra-size</loc>
     <lastmod>2026-02-27</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
@@ -1838,6 +1856,138 @@
   </url>
   <url>
     <loc>https://solvefree.com/everyday/deck</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/statistics/normal-distribution</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/statistics/confidence-interval</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/statistics/z-score</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/statistics/combination-permutation</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/statistics/probability</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/statistics/binomial-distribution</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/statistics/poisson-distribution</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/statistics/five-number-summary</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/statistics/standard-deviation</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/statistics/margin-of-error</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/geometry/right-triangle</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/geometry/triangle</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/geometry/circle</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/geometry/pythagorean-theorem</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/geometry/trapezoid</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/geometry/parallelogram</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/geometry/regular-polygon</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/geometry/ellipse</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/geometry/arc-length</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/geometry/slope</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/physics/hookes-law</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/physics/thin-lens</loc>
     <lastmod>2026-02-27</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>

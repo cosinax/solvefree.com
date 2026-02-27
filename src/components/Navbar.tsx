@@ -21,6 +21,8 @@ const categories = [
   { name: "Network", href: "/network" },
   { name: "Security", href: "/security" },
   { name: "RF", href: "/rf" },
+  { name: "Statistics", href: "/statistics" },
+  { name: "Geometry", href: "/geometry" },
 ];
 
 export function Navbar() {
