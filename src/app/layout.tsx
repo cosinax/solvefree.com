@@ -15,24 +15,50 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://solvefree.com"),
   title: {
     default: "SolveFree — Free Online Calculators",
     template: "%s | SolveFree",
   },
   description:
-    "A massive collection of free online calculators. No ads, no tracking. Math, finance, health, conversions, timers, AI, electronics, and more.",
+    "168+ free online calculators for math, finance, health, conversions, timers, electronics, AI, and more. No ads. No tracking. 100% browser-based.",
   keywords: [
-    "calculator",
     "free calculator",
     "online calculator",
+    "math calculator",
     "mortgage calculator",
     "BMI calculator",
     "unit converter",
     "investment calculator",
     "percentage calculator",
+    "scientific calculator",
+    "loan calculator",
+    "compound interest calculator",
+    "health calculator",
+    "electricity calculator",
+    "AI token calculator",
     "timer",
     "stopwatch",
   ],
+  alternates: {
+    canonical: "https://solvefree.com",
+  },
+  openGraph: {
+    type: "website",
+    siteName: "SolveFree",
+    title: "SolveFree — Free Online Calculators",
+    description:
+      "168+ free online calculators. No ads, no tracking. Math, finance, health, conversions, electronics, AI, and more.",
+    url: "https://solvefree.com",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
 };
 
 export default function RootLayout({
