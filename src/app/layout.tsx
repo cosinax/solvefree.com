@@ -50,6 +50,12 @@ export const metadata: Metadata = {
     description: `${allCalculators.length}+ free online calculators. No ads, no tracking. Math, finance, health, conversions, electronics, AI, and more.`,
     url: "https://solvefree.com",
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+  },
   robots: {
     index: true,
     follow: true,
