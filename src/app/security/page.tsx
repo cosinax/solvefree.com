@@ -6,6 +6,8 @@ export const metadata: Metadata = {
   title: "Security Tools",
   description: "Free security tools: password strength checker, entropy calculator, JWT decoder, hash identifier, bcrypt cost estimator, and more.",
   openGraph: {
+    type: "website",
+    siteName: "SolveFree",
     title: "Security Tools — SolveFree",
     description: "Free security tools: password strength, JWT decoder, entropy, hash comparison.",
     url: "https://solvefree.com/security",

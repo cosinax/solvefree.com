@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   description:
     "Free physics calculators: velocity, force, energy, pressure, projectile motion, pendulum, waves, gravity, half-life, ideal gas, and more.",
   openGraph: {
+    type: "website",
+    siteName: "SolveFree",
     title: "Physics Calculators — SolveFree",
     description: "Free physics calculators: velocity, force, energy, projectile motion, waves, thermodynamics.",
     url: "https://solvefree.com/physics",

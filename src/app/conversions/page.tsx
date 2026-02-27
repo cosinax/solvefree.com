@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   description:
     "Free unit converters: length, weight, temperature, speed, area, volume, data, time, and more.",
   openGraph: {
+    type: "website",
+    siteName: "SolveFree",
     title: "Unit Converters — SolveFree",
     description: "Free unit converters for length, weight, temperature, speed, area, volume, and more.",
     url: "https://solvefree.com/conversions",

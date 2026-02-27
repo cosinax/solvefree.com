@@ -6,6 +6,8 @@ export const metadata: Metadata = {
   title: "RF & Antenna Calculators",
   description: "Free RF and antenna calculators: wavelength, dipole length, path loss, link budget, VSWR, dBm conversion, antenna gain, noise figure, skin depth, coaxial cable parameters.",
   openGraph: {
+    type: "website",
+    siteName: "SolveFree",
     title: "RF & Antenna Calculators — SolveFree",
     description: "Free RF calculators: wavelength, path loss, VSWR, link budget, noise figure, coax.",
     url: "https://solvefree.com/rf",

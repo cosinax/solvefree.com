@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   description:
     "Free online timers: countdown timer, stopwatch, Pomodoro timer, world clock, date calculator, and more.",
   openGraph: {
+    type: "website",
+    siteName: "SolveFree",
     title: "Timers & Clocks — SolveFree",
     description: "Free timers and clocks: stopwatch, Pomodoro, world clock, date calculator, countdown.",
     url: "https://solvefree.com/timers",

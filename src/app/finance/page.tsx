@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   description:
     "Free financial calculators: mortgage, compound interest, investment simulator, loan, savings, retirement, and more.",
   openGraph: {
+    type: "website",
+    siteName: "SolveFree",
     title: "Finance Calculators — SolveFree",
     description: "Free finance calculators for mortgage, compound interest, loans, retirement, and more.",
     url: "https://solvefree.com/finance",

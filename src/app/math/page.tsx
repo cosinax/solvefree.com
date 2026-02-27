@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   description:
     "Free math calculators: general purpose, scientific, percentage, fraction, exponent, logarithm, and more.",
   openGraph: {
+    type: "website",
+    siteName: "SolveFree",
     title: "Math Calculators — SolveFree",
     description: "Free math calculators for percentages, fractions, geometry, statistics, and more.",
     url: "https://solvefree.com/math",

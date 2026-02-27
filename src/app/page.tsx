@@ -38,14 +38,6 @@ export default function HomePage() {
     url: "https://solvefree.com",
     description:
       "Free online calculators for math, finance, health, conversions, timers, electronics, AI, and more.",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: "https://solvefree.com/?q={search_term_string}",
-      },
-      "query-input": "required name=search_term_string",
-    },
   };
 
   return (

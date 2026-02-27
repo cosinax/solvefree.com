@@ -6,6 +6,8 @@ export const metadata: Metadata = {
   title: "Electricity & Electronics",
   description: "Free electrical calculators: Ohm's law, power, resistance, wire gauge, LED resistor, and more.",
   openGraph: {
+    type: "website",
+    siteName: "SolveFree",
     title: "Electronics Calculators — SolveFree",
     description: "Free electronics calculators: Ohm's law, resistors, capacitors, voltage divider, wire gauge.",
     url: "https://solvefree.com/electricity",

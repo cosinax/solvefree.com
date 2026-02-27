@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { allCalculators } from "@/data/calculators";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,8 +21,7 @@ export const metadata: Metadata = {
     default: "SolveFree — Free Online Calculators",
     template: "%s | SolveFree",
   },
-  description:
-    "168+ free online calculators for math, finance, health, conversions, timers, electronics, AI, and more. No ads. No tracking. 100% browser-based.",
+  description: `${allCalculators.length}+ free online calculators for math, finance, health, conversions, timers, electronics, AI, and more. No ads. No tracking. 100% browser-based.`,
   keywords: [
     "free calculator",
     "online calculator",
@@ -47,8 +47,7 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "SolveFree",
     title: "SolveFree — Free Online Calculators",
-    description:
-      "168+ free online calculators. No ads, no tracking. Math, finance, health, conversions, electronics, AI, and more.",
+    description: `${allCalculators.length}+ free online calculators. No ads, no tracking. Math, finance, health, conversions, electronics, AI, and more.`,
     url: "https://solvefree.com",
   },
   robots: {

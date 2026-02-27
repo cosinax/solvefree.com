@@ -6,6 +6,8 @@ export const metadata: Metadata = {
   title: "AI & Machine Learning",
   description: "Free AI calculators: token estimator, model cost, confusion matrix, softmax, and more.",
   openGraph: {
+    type: "website",
+    siteName: "SolveFree",
     title: "AI & ML Calculators — SolveFree",
     description: "Free AI calculators: token estimator, API cost, model size, confusion matrix, softmax.",
     url: "https://solvefree.com/ai",

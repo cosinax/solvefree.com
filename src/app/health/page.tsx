@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   description:
     "Free health calculators: BMI, TDEE, calorie, body fat, pregnancy due date, heart rate, and more.",
   openGraph: {
+    type: "website",
+    siteName: "SolveFree",
     title: "Health Calculators — SolveFree",
     description: "Free health calculators for BMI, TDEE, calories, body fat, heart rate, and more.",
     url: "https://solvefree.com/health",
