@@ -1,0 +1,7 @@
+{
+  "app": "npx ts-node --project tsconfig.json app.ts",
+  "context": {
+    "domainName": "solvefree.com",
+    "hostedZoneId": "Z0793484190FTMFUPJVVW"
+  }
+}
