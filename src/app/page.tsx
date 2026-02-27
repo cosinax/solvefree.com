@@ -31,8 +31,30 @@ const categories = [
 ];
 
 export default function HomePage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "SolveFree",
+    url: "https://solvefree.com",
+    description:
+      "Free online calculators for math, finance, health, conversions, timers, electronics, AI, and more.",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: "https://solvefree.com/?q={search_term_string}",
+      },
+      "query-input": "required name=search_term_string",
+    },
+  };
+
   return (
     <div>
+      {/* JSON-LD: hardcoded static object, not user input — dangerouslySetInnerHTML is safe */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero */}
       <section className="bg-card border-b border-card-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
