@@ -122,6 +122,20 @@ const calculators = [
   { title: "Markup Calculator", description: "Markup %, profit margin, and target price from cost", href: "/finance/markup", icon: "💰" },
   { title: "Sales Tax Calculator", description: "Add or remove sales tax with quick-reference rate table", href: "/finance/sales-tax", icon: "🪙" },
   { title: "WACC Calculator", description: "Weighted Average Cost of Capital with formula breakdown", href: "/finance/wacc", icon: "🔗" },
+  { title: "401(k) Savings Calculator", description: "Project your 401(k) balance at retirement including employer matching", href: "/finance/401k-calculator", icon: "💼" },
+  { title: "Roth IRA Calculator", description: "Project your Roth IRA balance with tax-free growth", href: "/finance/roth-ira", icon: "📈" },
+  { title: "CD Calculator", description: "Calculate earnings on a Certificate of Deposit", href: "/finance/cd-calculator", icon: "🏦" },
+  { title: "CD Ladder Calculator", description: "Plan a staggered CD strategy for regular liquidity", href: "/finance/cd-ladder", icon: "🪜" },
+  { title: "Mortgage Refinance", description: "Compare refinancing options and find your break-even point", href: "/finance/mortgage-refinance", icon: "🏡" },
+  { title: "Home Affordability", description: "Estimate the max home price you can afford using 28/36 rule", href: "/finance/home-affordability", icon: "🏘️" },
+  { title: "Home Equity Calculator", description: "See how your home equity grows over time", href: "/finance/home-equity", icon: "🏗️" },
+  { title: "HELOC Calculator", description: "Calculate your HELOC line, draw-period payments, and repayment schedule", href: "/finance/heloc", icon: "🏠" },
+  { title: "Cost of Living Calculator", description: "Compare cost of living between US cities and find equivalent salary", href: "/finance/cost-of-living", icon: "🗺️" },
+  { title: "Credit Card Payoff", description: "See how long to pay off your credit card and total interest paid", href: "/finance/credit-card-payoff", icon: "💳" },
+  { title: "Balance Transfer Calculator", description: "Compare your current card vs a low-APR transfer offer", href: "/finance/balance-transfer", icon: "↔️" },
+  { title: "Credit Utilization Calculator", description: "Track per-card and overall utilization — keep under 30%", href: "/finance/credit-utilization", icon: "📊" },
+  { title: "Student Loan Calculator", description: "Estimate monthly payments and total interest across repayment plans", href: "/finance/student-loan", icon: "🎓" },
+  { title: "Business Loan Calculator", description: "Monthly payments, total interest, and amortization for business loans", href: "/finance/business-loan", icon: "🏢" },
 ];
 
 export default function FinancePage() {
