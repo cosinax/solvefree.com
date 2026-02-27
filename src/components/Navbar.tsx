@@ -17,6 +17,10 @@ const categories = [
   { name: "Everyday", href: "/everyday" },
   { name: "Education", href: "/education" },
   { name: "Physics", href: "/physics" },
+  { name: "Space", href: "/space" },
+  { name: "Network", href: "/network" },
+  { name: "Security", href: "/security" },
+  { name: "RF", href: "/rf" },
 ];
 
 export function Navbar() {
