@@ -266,6 +266,10 @@ export const allCalculators: Calculator[] = [
   { title: "Thermal Expansion", description: "Linear and volumetric thermal expansion by material", href: "/physics/thermal-expansion", icon: "thermometer", category: "Physics" },
   { title: "Percent Error", description: "Percent error, absolute error, and percent difference", href: "/physics/percent-error", icon: "percent", category: "Physics" },
   { title: "Work & Power", description: "Work = F×d×cos(θ), Power = W/t, torque power", href: "/physics/work-power", icon: "zap", category: "Physics" },
+  { title: "Acceleration Calculator", description: "Find acceleration via F=ma, Δv/t, or kinematics", href: "/physics/acceleration", icon: "rocket", category: "Physics" },
+  { title: "Momentum Calculator", description: "Momentum, kinetic energy, and inelastic collisions", href: "/physics/momentum", icon: "zap", category: "Physics" },
+  { title: "Torque Calculator", description: "τ = F × r × sin(θ) — torque, force, or moment arm", href: "/physics/torque", icon: "settings", category: "Physics" },
+  { title: "Buoyancy Calculator", description: "Buoyant force and float/sink with Archimedes' principle", href: "/physics/buoyancy", icon: "droplets", category: "Physics" },
   // RF & Antenna (10)
   { title: "Wavelength / Frequency", description: "Convert between frequency and wavelength, plus half/quarter wave", href: "/rf/wavelength", icon: "radio", category: "RF & Antenna" },
   { title: "Dipole Antenna Length", description: "Half-wave and quarter-wave dipole lengths from frequency", href: "/rf/dipole-antenna", icon: "radio", category: "RF & Antenna" },
@@ -290,4 +294,24 @@ export const allCalculators: Calculator[] = [
   { title: "Orbital Speed", description: "Circular orbital velocity at any altitude around any body", href: "/space/orbital-speed", icon: "fast-forward", category: "Space" },
   { title: "Delta-V Budget", description: "Stack mission maneuvers and estimate total Δv requirements", href: "/space/delta-v-budget", icon: "list-ordered", category: "Space" },
   { title: "Angular Size", description: "Angular size of objects by physical size and distance", href: "/space/angular-size", icon: "eye", category: "Space" },
+  // Math - Geometry additions
+  { title: "Cylinder Calculator", description: "Volume, surface area, and lateral area of a cylinder", href: "/math/cylinder", icon: "cylinder", category: "Math" },
+  { title: "Sphere Calculator", description: "Volume, surface area, and great circle from any measurement", href: "/math/sphere", icon: "globe", category: "Math" },
+  { title: "Cone Calculator", description: "Volume, surface area, and slant height of a cone", href: "/math/cone", icon: "triangle", category: "Math" },
+  { title: "Rectangle Calculator", description: "Area, perimeter, and diagonal of a rectangle", href: "/math/rectangle", icon: "square", category: "Math" },
+  { title: "Volume Calculator", description: "Volume and surface area for 6 common 3D shapes", href: "/math/volume", icon: "box", category: "Math" },
+  { title: "Midpoint Calculator", description: "Midpoint, distance, and slope between two points", href: "/math/midpoint", icon: "map-pin", category: "Math" },
+  { title: "Distance Calculator", description: "Euclidean and Manhattan distance in 2D or 3D", href: "/math/distance", icon: "ruler", category: "Math" },
+  // Education
+  { title: "GPA Calculator", description: "Calculate GPA from course grades and credit hours", href: "/education/gpa", icon: "graduation-cap", category: "Education" },
+  { title: "GRE Score Calculator", description: "GRE scaled scores and percentile rankings", href: "/education/gre-score", icon: "file-text", category: "Education" },
+  { title: "SAT Score Calculator", description: "Total SAT score and percentile from section scores", href: "/education/sat-score", icon: "bar-chart", category: "Education" },
+  { title: "Study Time Calculator", description: "Plan study hours per subject before exams", href: "/education/study-time", icon: "clock", category: "Education" },
+  { title: "Reading Level Calculator", description: "Flesch-Kincaid readability analysis of any text", href: "/education/reading-level", icon: "book-open", category: "Education" },
+  { title: "Student-Teacher Ratio", description: "Calculate student-to-teacher ratio and staffing adequacy", href: "/education/student-teacher-ratio", icon: "users", category: "Education" },
+  // Everyday - Construction
+  { title: "Drywall Calculator", description: "Estimate drywall sheets, screws, and compound for a room", href: "/everyday/drywall", icon: "home", category: "Everyday" },
+  { title: "Fence Calculator", description: "Estimate fence posts, rails, boards, and cost", href: "/everyday/fence", icon: "columns-3", category: "Everyday" },
+  { title: "Roofing Calculator", description: "Estimate shingles, bundles, squares, and material cost", href: "/everyday/roofing", icon: "house", category: "Everyday" },
+  { title: "Deck Calculator", description: "Estimate decking boards, joists, screws, and cost", href: "/everyday/deck", icon: "grid-3x3", category: "Everyday" },
 ];

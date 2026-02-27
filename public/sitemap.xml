@@ -91,6 +91,12 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://solvefree.com/education</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://solvefree.com/math/general</loc>
     <lastmod>2026-02-27</lastmod>
     <priority>0.7</priority>
@@ -512,6 +518,90 @@
   </url>
   <url>
     <loc>https://solvefree.com/finance/wacc</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/finance/401k-calculator</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/finance/roth-ira</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/finance/cd-calculator</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/finance/cd-ladder</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/finance/mortgage-refinance</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/finance/home-affordability</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/finance/home-equity</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/finance/heloc</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/finance/cost-of-living</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/finance/credit-card-payoff</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/finance/balance-transfer</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/finance/credit-utilization</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/finance/student-loan</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/finance/business-loan</loc>
     <lastmod>2026-02-27</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
@@ -1489,6 +1579,30 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://solvefree.com/physics/acceleration</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/physics/momentum</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/physics/torque</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/physics/buoyancy</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://solvefree.com/rf/wavelength</loc>
     <lastmod>2026-02-27</lastmod>
     <priority>0.7</priority>
@@ -1616,6 +1730,108 @@
   </url>
   <url>
     <loc>https://solvefree.com/space/angular-size</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/math/cylinder</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/math/sphere</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/math/cone</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/math/rectangle</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/math/volume</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/math/midpoint</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/math/distance</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/education/gpa</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/education/gre-score</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/education/sat-score</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/education/study-time</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/education/reading-level</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/education/student-teacher-ratio</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/everyday/drywall</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/everyday/fence</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/everyday/roofing</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/everyday/deck</loc>
     <lastmod>2026-02-27</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>

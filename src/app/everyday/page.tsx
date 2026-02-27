@@ -48,6 +48,10 @@ const calculators = [
   { title: "Asphalt Calculator", description: "Estimate tons of asphalt needed for a driveway or road", href: "/everyday/asphalt", icon: "🛣️" },
   { title: "Generation Calculator", description: "Find your generation (Boomer, Gen X, Millennial, Gen Z…)", href: "/everyday/generation", icon: "👶" },
   { title: "Helium Balloons", description: "How many helium balloons to lift an object?", href: "/everyday/helium-balloons", icon: "🎈" },
+  { title: "Drywall Calculator", description: "Estimate drywall sheets, screws, and compound for a room", href: "/everyday/drywall", icon: "🏠" },
+  { title: "Fence Calculator", description: "Estimate fence posts, rails, boards, and cost", href: "/everyday/fence", icon: "🪵" },
+  { title: "Roofing Calculator", description: "Estimate shingles, bundles, squares, and material cost", href: "/everyday/roofing", icon: "🏡" },
+  { title: "Deck Calculator", description: "Estimate decking boards, joists, screws, and cost", href: "/everyday/deck", icon: "🪜" },
 ];
 
 export default function EverydayPage() {

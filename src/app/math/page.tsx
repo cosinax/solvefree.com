@@ -113,6 +113,13 @@ const calculators = [
   { title: "P-Value Calculator", description: "P-values for z-tests, t-tests, and chi-square tests", href: "/math/p-value", icon: "🧪" },
   { title: "Dice Probability", description: "Probability distributions and roll simulator for any dice", href: "/math/dice", icon: "🃏" },
   { title: "Odds Converter", description: "Convert between probability, decimal, fractional, and American odds", href: "/math/odds", icon: "♠️" },
+  { title: "Cylinder Calculator", description: "Volume, surface area, and lateral area of a cylinder", href: "/math/cylinder", icon: "⚙️" },
+  { title: "Sphere Calculator", description: "Volume, surface area, and great circle from any known value", href: "/math/sphere", icon: "🌐" },
+  { title: "Cone Calculator", description: "Volume, surface area, and slant height of a cone", href: "/math/cone", icon: "🔺" },
+  { title: "Rectangle Calculator", description: "Area, perimeter, and diagonal of a rectangle", href: "/math/rectangle", icon: "⬜" },
+  { title: "Volume Calculator", description: "Volume and surface area for 6 common 3D shapes", href: "/math/volume", icon: "📦" },
+  { title: "Midpoint Calculator", description: "Midpoint, distance, and slope between two 2D points", href: "/math/midpoint", icon: "📍" },
+  { title: "Distance Calculator", description: "Euclidean and Manhattan distance in 2D or 3D space", href: "/math/distance", icon: "📏" },
 ];
 
 export default function MathPage() {

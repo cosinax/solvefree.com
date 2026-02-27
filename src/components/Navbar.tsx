@@ -15,6 +15,8 @@ const categories = [
   { name: "Electricity", href: "/electricity" },
   { name: "AI", href: "/ai" },
   { name: "Everyday", href: "/everyday" },
+  { name: "Education", href: "/education" },
+  { name: "Physics", href: "/physics" },
 ];
 
 export function Navbar() {

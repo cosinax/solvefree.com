@@ -2,6 +2,8 @@ import Link from "next/link";
 import { Calculator, Hash, Percent, DivideSquare, Sigma, BarChart3, TrendingUp, Home, DollarSign, CreditCard, Car, Target, Umbrella, Receipt, Tag, Coins, PiggyBank, Gem, ClipboardList, Scale, Flame, Apple, Ruler, Heart, Droplets, Moon, Beer, Drumstick, Timer, Clock, Globe, Calendar, Cake, Hourglass, Binary, MapPin, Palette, FileJson, Search, Lock, Link2, Fingerprint, Key, Type, FileText, FolderOpen, Code, Monitor, Lightbulb, Zap, CircleDot, Plug, Battery, Gauge, Radio, Waves, Brain, CircuitBoard, GraduationCap, Fuel, Pizza, Dog, Cat, Footprints, HardHat, PaintBucket, Grid3x3, Droplet, Mountain, ArrowUpDown, Bus, FlaskConical, Camera, ArrowLeftRight, Thermometer, Wind, Maximize, Beaker, Database, Activity, Wrench, SunMedium, ChefHat, TriangleRight,
   // New icons
   AlarmClock, Ampersand, Atom, Baby, Banknote, BookOpen, BrainCircuit, Building2, Cable, CalendarClock, ChartBar, Circle, CircleDashed, Clock4, Cpu, Dice5, Dices, Dumbbell, Egg, Eye, FastForward, FileCode, FileDiff, FunctionSquare, Globe2, Grid2X2, HandCoins, Info, KeyRound, Keyboard, Landmark, Layers, LayoutGrid, ListOrdered, LockKeyhole, Network, Orbit, PartyPopper, Pilcrow, Radical, RadioTower, ReceiptText, Rocket, Satellite, Scale3d, Scan, ScatterChart, SearchCode, Server, Settings, ShieldCheck, Signal, Sliders, Star, Subscript, Superscript, Table, Terminal, TrendingDown, Users, Utensils, Wallet, Wifi, XSquare, ZapOff,
+  // Geometry & construction icons
+  Box, Cylinder, Square, House, Columns3,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -95,6 +97,11 @@ const iconMap: Record<string, LucideIcon> = {
   wifi: Wifi,
   "x-square": XSquare,
   "zap-off": ZapOff,
+  box: Box,
+  cylinder: Cylinder,
+  square: Square,
+  house: House,
+  "columns-3": Columns3,
 };
 
 interface CalculatorCardProps {

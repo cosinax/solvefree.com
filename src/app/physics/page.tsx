@@ -101,6 +101,10 @@ const calculators = [
     href: "/physics/work-power",
     icon: "🔧",
   },
+  { title: "Acceleration Calculator", description: "Find acceleration via F=ma, Δv/t, or kinematics", href: "/physics/acceleration", icon: "🚀" },
+  { title: "Momentum Calculator", description: "Momentum, kinetic energy, and inelastic collisions", href: "/physics/momentum", icon: "💥" },
+  { title: "Torque Calculator", description: "τ = F × r × sin(θ) — solve for torque, force, or moment arm", href: "/physics/torque", icon: "🔩" },
+  { title: "Buoyancy Calculator", description: "Buoyant force and whether an object floats or sinks", href: "/physics/buoyancy", icon: "🛟" },
 ];
 
 export default function PhysicsPage() {
