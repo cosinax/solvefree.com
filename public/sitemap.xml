@@ -1345,6 +1345,18 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://solvefree.com/everyday/ski-din</loc>
+    <lastmod>2026-02-28</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/everyday/ski-run</loc>
+    <lastmod>2026-02-28</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://solvefree.com/everyday/reading-time</loc>
     <lastmod>2026-02-28</lastmod>
     <priority>0.7</priority>

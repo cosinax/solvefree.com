@@ -45,6 +45,8 @@ const calculators = [
   { title: "Brick Calculator", description: "Estimate bricks and mortar bags for a wall or paving project", href: "/everyday/brick", icon: "🧱" },
   { title: "Age Difference", description: "Find the age difference between two people", href: "/everyday/age-difference", icon: "🎂" },
   { title: "Hours Calculator", description: "Add or subtract time durations and find time between clock times", href: "/everyday/hours", icon: "⏱️" },
+  { title: "Ski DIN Calculator", description: "Ski binding release settings per ISO 11088", href: "/everyday/ski-din", icon: "⛷️" },
+  { title: "Ski Run Calculator", description: "Slope angle, grade, and estimated run time", href: "/everyday/ski-run", icon: "🎿" },
   { title: "Tire Size Calculator", description: "Compare two tire sizes — diameter, circumference, speedometer diff", href: "/everyday/tire-size", icon: "🛞" },
   { title: "Asphalt Calculator", description: "Estimate tons of asphalt needed for a driveway or road", href: "/everyday/asphalt", icon: "🛣️" },
   { title: "Generation Calculator", description: "Find your generation (Boomer, Gen X, Millennial, Gen Z…)", href: "/everyday/generation", icon: "👶" },

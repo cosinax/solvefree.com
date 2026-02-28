@@ -222,6 +222,8 @@ export const allCalculators: Calculator[] = [
   { title: "Dilution Calculator", description: "Dilution ratios for solutions", href: "/everyday/dilution", icon: "flask", category: "Everyday" },
   { title: "Photography", description: "DoF, FoV, hyperfocal distance", href: "/everyday/photography", icon: "camera", category: "Everyday" },
   { title: "Monitor PPI", description: "Pixels per inch for any screen size", href: "/everyday/monitor-ppi", icon: "monitor", category: "Everyday" },
+  { title: "Ski DIN Calculator", description: "Binding release settings per ISO 11088", href: "/everyday/ski-din", icon: "mountain", category: "Everyday" },
+  { title: "Ski Run Calculator", description: "Slope angle, grade, and estimated run time", href: "/everyday/ski-run", icon: "mountain", category: "Everyday" },
   { title: "Reading Time Estimator", description: "How long to read or speak any text", href: "/everyday/reading-time", icon: "book-open", category: "Everyday" },
   { title: "Recipe Scaler", description: "Scale recipe ingredients to any servings", href: "/everyday/recipe-scaler", icon: "utensils", category: "Everyday" },
   { title: "Typing Speed Calculator", description: "Calculate WPM from word count and time", href: "/everyday/typing-speed", icon: "keyboard", category: "Everyday" },
