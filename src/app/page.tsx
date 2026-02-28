@@ -24,7 +24,7 @@ const categories = [
   { title: "AI & ML", description: "Token estimator, API costs, model sizing, metrics", href: "/ai", icon: "brain" },
   { title: "Everyday", description: "GPA, fuel, pizza, paint, concrete, pets, photography", href: "/everyday", icon: "home" },
   { title: "Network", description: "Bandwidth, subnets, CIDR, latency, WiFi, ports", href: "/network", icon: "wifi" },
-  { title: "Security", description: "Password strength, JWT decoder, entropy, hashes", href: "/security", icon: "shield" },
+  { title: "Security", description: "Password strength, JWT decoder, entropy, hashes", href: "/security", icon: "shield-check" },
   { title: "Physics", description: "Velocity, force, energy, projectile motion, waves, thermodynamics", href: "/physics", icon: "atom" },
   { title: "RF & Antenna", description: "Wavelength, path loss, VSWR, link budget, dBm, coax, noise figure", href: "/rf", icon: "radio" },
   { title: "Space", description: "Orbital mechanics, rocket equation, black holes, stellar physics", href: "/space", icon: "globe" },
