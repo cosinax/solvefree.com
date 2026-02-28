@@ -80,14 +80,14 @@ export default function NormalDistributionPage() {
     }
   }, [v]);
 
-  // Draw bell curve
+  // Draw bell curve. normPDF(0) ≈ 0.3989, scale=200 → peak at py=90-0.3989*200≈10 (10px from top)
   const bellPoints = useMemo(() => {
     const pts: string[] = [];
     for (let i = 0; i <= 100; i++) {
       const z = -4 + i * 0.08;
       const y = normPDF(z);
-      const px = (i / 100) * 300;
-      const py = 60 - y * 180;
+      const px = (i / 100) * 280 + 10;
+      const py = 90 - y * 200;
       pts.push(`${px},${py}`);
     }
     return pts.join(" ");
@@ -147,11 +147,11 @@ export default function NormalDistributionPage() {
           <div className="space-y-3">
             {/* Bell curve SVG */}
             <div className="bg-card border border-card-border rounded-lg p-3 overflow-hidden">
-              <svg viewBox="0 0 300 70" className="w-full h-16">
+              <svg viewBox="0 0 300 100" className="w-full h-24">
                 {/* Fill left of z */}
                 {shadePct != null && (
                   <clipPath id="shadeClip">
-                    <rect x="0" y="0" width={`${shadePct * 3}`} height="70" />
+                    <rect x="0" y="0" width={`${shadePct * 2.8 + 10}`} height="100" />
                   </clipPath>
                 )}
                 <polyline points={bellPoints} fill="none" stroke="var(--color-card-border)" strokeWidth="1.5" />
@@ -159,7 +159,7 @@ export default function NormalDistributionPage() {
                   <polyline points={bellPoints} fill="rgba(99,102,241,0.25)" stroke="none" clipPath="url(#shadeClip)" />
                 )}
                 {shadePct != null && (
-                  <line x1={`${shadePct * 3}`} y1="0" x2={`${shadePct * 3}`} y2="70" stroke="rgb(99,102,241)" strokeWidth="1.5" strokeDasharray="4,2" />
+                  <line x1={`${shadePct * 2.8 + 10}`} y1="0" x2={`${shadePct * 2.8 + 10}`} y2="100" stroke="rgb(99,102,241)" strokeWidth="1.5" strokeDasharray="4,2" />
                 )}
               </svg>
             </div>

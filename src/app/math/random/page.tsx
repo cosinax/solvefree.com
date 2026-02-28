@@ -56,7 +56,7 @@ export default function RandomPage() {
 
         <button onClick={generate}
           className="w-full bg-primary text-white py-2.5 rounded-lg font-medium hover:bg-primary-hover transition-colors">
-          🎲 Generate
+          Generate
         </button>
 
         {results.length > 0 && (

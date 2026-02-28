@@ -125,6 +125,7 @@ export function CalculatorCard({
   icon,
 }: CalculatorCardProps) {
   const IconComponent = icon ? iconMap[icon] : null;
+  const isEmoji = icon && !IconComponent;
 
   return (
     <Link
@@ -134,6 +135,8 @@ export function CalculatorCard({
       <div className="mb-3">
         {IconComponent ? (
           <IconComponent className="h-6 w-6 text-muted group-hover:text-primary transition-colors" strokeWidth={1.5} />
+        ) : isEmoji ? (
+          <span className="text-2xl">{icon}</span>
         ) : emoji ? (
           <span className="text-2xl">{emoji}</span>
         ) : (

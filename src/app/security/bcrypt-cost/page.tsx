@@ -49,9 +49,9 @@ export default function BcryptCostPage() {
                 <span className="font-mono font-bold text-xl">{cost}</span>
               </div>
             </div>
-            {cost < 10 && <div className="px-4 py-3 bg-red-50 dark:bg-red-950 border border-red-200 dark:border-red-800 rounded-lg text-sm text-danger">⚠️ Cost {cost} is too low for production use. Minimum recommended: 10.</div>}
-            {cost >= 10 && cost <= 12 && <div className="px-4 py-3 bg-green-50 dark:bg-green-950 border border-green-200 dark:border-green-800 rounded-lg text-sm text-success">✅ Cost {cost} is appropriate for most web applications.</div>}
-            {cost > 12 && <div className="px-4 py-3 bg-primary-light rounded-lg text-sm">🔒 High cost factor — excellent security, but may slow login for users.</div>}
+            {cost < 10 && <div className="px-4 py-3 bg-red-50 dark:bg-red-950 border border-red-200 dark:border-red-800 rounded-lg text-sm text-danger">Cost {cost} is too low for production use. Minimum recommended: 10.</div>}
+            {cost >= 10 && cost <= 12 && <div className="px-4 py-3 bg-green-50 dark:bg-green-950 border border-green-200 dark:border-green-800 rounded-lg text-sm text-success">Cost {cost} is appropriate for most web applications.</div>}
+            {cost > 12 && <div className="px-4 py-3 bg-primary-light rounded-lg text-sm">High cost factor — excellent security, but may slow login for users.</div>}
           </div>
         )}
         <div className="space-y-1 text-xs font-mono">

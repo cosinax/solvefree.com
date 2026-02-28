@@ -45,8 +45,8 @@ export default function TcpThroughputPage() {
               </div>
             </div>
             {efficiency < 95 && (
-              <div className="px-4 py-3 bg-yellow-50 dark:bg-yellow-950 border border-yellow-200 dark:border-yellow-800 rounded-lg text-sm">
-                💡 To fully utilize the link, increase TCP window size to <strong>{(bdpKB).toFixed(0)} KB</strong> (the bandwidth-delay product).
+              <div className="px-4 py-3 bg-background border border-card-border rounded-lg text-sm text-muted">
+                To fully utilize the link, set TCP window size to <strong className="text-foreground">{(bdpKB).toFixed(0)} KB</strong> (the bandwidth-delay product).
               </div>
             )}
           </div>

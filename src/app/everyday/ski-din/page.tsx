@@ -158,7 +158,7 @@ export default function SkiDinPage() {
             </div>
             {(age > 50 || age < 10) && (
               <div className="px-3 py-2 bg-accent/10 border border-accent/30 rounded-lg text-xs text-accent">
-                ℹ️ Age adjustment applied — settings reduced by one code level for age {age}.
+                Age adjustment applied — settings reduced by one code level for age {age}.
               </div>
             )}
             <div className="px-4 py-3 bg-background border border-card-border rounded-lg text-xs text-muted space-y-1">

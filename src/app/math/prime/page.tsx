@@ -49,7 +49,7 @@ export default function PrimePage() {
             <div className={`rounded-xl p-4 text-center ${prime ? "bg-primary-light" : "bg-background border border-card-border"}`}>
               <span className="block text-sm text-muted">{n.toLocaleString()} is</span>
               <span className={`block font-mono font-bold text-4xl ${prime ? "text-primary" : ""}`}>
-                {prime ? "🔢 Prime" : "Not Prime"}
+                {prime ? "Prime" : "Not Prime"}
               </span>
             </div>
             {!prime && factors.length > 0 && (

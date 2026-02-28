@@ -1,4 +1,6 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface CalculatorShellProps {
   title: string;
@@ -6,22 +8,43 @@ interface CalculatorShellProps {
   children: React.ReactNode;
 }
 
-// Derive category from the current path
-function getCategoryFromTitle(title: string): { name: string; href: string } | null {
-  // This is a simple approach - works because CalculatorShell is only used in calculator pages
-  return null; // Will be enhanced with breadcrumb links via the page URL
-}
+const categoryLabels: Record<string, string> = {
+  math: "Math",
+  finance: "Finance",
+  health: "Health",
+  conversions: "Conversions",
+  timers: "Timers",
+  computer: "Computer",
+  everyday: "Everyday",
+  network: "Network",
+  security: "Security",
+  statistics: "Statistics",
+  geometry: "Geometry",
+  electricity: "Electricity",
+  physics: "Physics",
+  space: "Space",
+  rf: "RF",
+  ai: "AI",
+};
 
 export function CalculatorShell({
   title,
   description,
   children,
 }: CalculatorShellProps) {
+  const pathname = usePathname();
+  // pathname looks like /category/tool-name
+  const parts = pathname.split("/").filter(Boolean);
+  const category = parts[0];
+  const categoryLabel = category ? categoryLabels[category] : null;
+  const backHref = categoryLabel ? `/${category}` : "/";
+  const backLabel = categoryLabel ? `← Back to ${categoryLabel}` : "← Back to all calculators";
+
   return (
     <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div className="mb-2">
-        <Link href="/" className="text-xs text-muted hover:text-primary transition-colors">
-          ← Back to all calculators
+        <Link href={backHref} className="text-xs text-muted hover:text-primary transition-colors">
+          {backLabel}
         </Link>
       </div>
       <div className="mb-6">

@@ -27,17 +27,17 @@ export default function WifiChannelsPage() {
     <CalculatorShell title="WiFi Channel Reference" description="2.4 GHz and 5 GHz WiFi channels, frequencies, and non-overlapping recommendations.">
       <div className="space-y-4">
         <div className="grid grid-cols-2 gap-2">
-          <button onClick={() => setBand("2.4")} className={`py-2 rounded-lg text-sm font-medium ${band === "2.4" ? "bg-primary text-white" : "bg-background border border-card-border"}`}>📡 2.4 GHz</button>
-          <button onClick={() => setBand("5")} className={`py-2 rounded-lg text-sm font-medium ${band === "5" ? "bg-primary text-white" : "bg-background border border-card-border"}`}>📡 5 GHz</button>
+          <button onClick={() => setBand("2.4")} className={`py-2 rounded-lg text-sm font-medium ${band === "2.4" ? "bg-primary text-white" : "bg-background border border-card-border"}`}>2.4 GHz</button>
+          <button onClick={() => setBand("5")} className={`py-2 rounded-lg text-sm font-medium ${band === "5" ? "bg-primary text-white" : "bg-background border border-card-border"}`}>5 GHz</button>
         </div>
         {band === "2.4" && (
-          <div className="bg-yellow-50 dark:bg-yellow-950 border border-yellow-200 dark:border-yellow-800 rounded-lg px-4 py-3 text-sm">
-            ✅ <strong>Non-overlapping channels (US):</strong> 1, 6, 11 — use these to avoid interference.
+          <div className="bg-primary-light border border-primary/20 rounded-lg px-4 py-3 text-sm">
+            <strong>Non-overlapping channels (US):</strong> 1, 6, 11 — use these to avoid interference.
           </div>
         )}
         {band === "5" && (
-          <div className="bg-green-50 dark:bg-green-950 border border-green-200 dark:border-green-800 rounded-lg px-4 py-3 text-sm">
-            ✅ All 5 GHz channels are non-overlapping with 20 MHz width. More channels, less congestion.
+          <div className="bg-primary-light border border-primary/20 rounded-lg px-4 py-3 text-sm">
+            All 5 GHz channels are non-overlapping with 20 MHz width. More channels, less congestion.
           </div>
         )}
         <div className="space-y-1 max-h-72 overflow-y-auto">

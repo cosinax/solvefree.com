@@ -12,11 +12,11 @@ function calcEntropy(password: string): number {
 }
 
 function getStrength(entropy: number): { label: string; color: string; bar: string; width: string } {
-  if (entropy < 28) return { label: "Very Weak 😬", color: "text-red-500", bar: "bg-red-500", width: "w-1/5" };
-  if (entropy < 36) return { label: "Weak 😟", color: "text-orange-500", bar: "bg-orange-500", width: "w-2/5" };
-  if (entropy < 60) return { label: "Moderate 🙂", color: "text-yellow-500", bar: "bg-yellow-500", width: "w-3/5" };
-  if (entropy < 128) return { label: "Strong 💪", color: "text-green-500", bar: "bg-green-500", width: "w-4/5" };
-  return { label: "Very Strong 🔒", color: "text-success", bar: "bg-success", width: "w-full" };
+  if (entropy < 28) return { label: "Very Weak", color: "text-red-500", bar: "bg-red-500", width: "w-1/5" };
+  if (entropy < 36) return { label: "Weak", color: "text-orange-500", bar: "bg-orange-500", width: "w-2/5" };
+  if (entropy < 60) return { label: "Moderate", color: "text-yellow-500", bar: "bg-yellow-500", width: "w-3/5" };
+  if (entropy < 128) return { label: "Strong", color: "text-green-500", bar: "bg-green-500", width: "w-4/5" };
+  return { label: "Very Strong", color: "text-success", bar: "bg-success", width: "w-full" };
 }
 
 const commonPasswords = ["password", "123456", "qwerty", "admin", "letmein", "monkey", "iloveyou", "dragon", "welcome", "sunshine"];
@@ -63,7 +63,7 @@ export default function PasswordStrengthPage() {
           <>
             {isCommon && (
               <div className="px-4 py-3 bg-red-50 dark:bg-red-950 border border-red-200 dark:border-red-800 rounded-lg text-sm text-danger font-medium">
-                ⚠️ This is one of the most commonly used passwords and would be cracked instantly.
+                This password is extremely common and would be cracked instantly.
               </div>
             )}
             <div className="space-y-2">
@@ -95,15 +95,15 @@ export default function PasswordStrengthPage() {
             </div>
             <div className="px-4 py-3 bg-background border border-card-border rounded-lg text-xs text-muted space-y-1">
               <p className="font-semibold">Estimated crack time (offline, modern GPU):</p>
-              {entropy < 28 && <p>🚨 &lt; 1 second</p>}
-              {entropy >= 28 && entropy < 40 && <p>⚠️ Minutes to hours</p>}
-              {entropy >= 40 && entropy < 60 && <p>⚠️ Days to months</p>}
-              {entropy >= 60 && entropy < 80 && <p>✅ Years</p>}
-              {entropy >= 80 && <p>🔒 Centuries or longer</p>}
+              {entropy < 28 && <p>&lt; 1 second</p>}
+              {entropy >= 28 && entropy < 40 && <p>Minutes to hours</p>}
+              {entropy >= 40 && entropy < 60 && <p>Days to months</p>}
+              {entropy >= 60 && entropy < 80 && <p>Years</p>}
+              {entropy >= 80 && <p>Centuries or longer</p>}
             </div>
           </>
         )}
-        <p className="text-xs text-muted">🔒 Analysis is 100% local. Your password never leaves your browser.</p>
+        <p className="text-xs text-muted">Analysis is 100% local — your password never leaves your browser.</p>
       </div>
     </CalculatorShell>
   );
