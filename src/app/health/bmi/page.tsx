@@ -10,6 +10,47 @@ function getBmiCategory(bmi: number): { label: string; color: string } {
   return { label: "Obese", color: "text-danger" };
 }
 
+function BmiScale({ bmi }: { bmi: number }) {
+  // Scale: 10 to 45
+  const MIN = 10, MAX = 45;
+  const clamp = Math.min(Math.max(bmi, MIN), MAX);
+  const pct = ((clamp - MIN) / (MAX - MIN)) * 100;
+
+  const segments = [
+    { label: "Underweight", end: 18.5, color: "#3b82f6" },
+    { label: "Normal", end: 25, color: "#22c55e" },
+    { label: "Overweight", end: 30, color: "#f59e0b" },
+    { label: "Obese", end: MAX, color: "#ef4444" },
+  ];
+
+  return (
+    <div className="space-y-1">
+      <div className="relative h-5 rounded-full overflow-hidden flex">
+        {segments.map((seg, i) => {
+          const start = i === 0 ? MIN : segments[i - 1].end;
+          const width = ((seg.end - start) / (MAX - MIN)) * 100;
+          return (
+            <div key={seg.label} style={{ width: `${width}%`, backgroundColor: seg.color }} className="h-full" />
+          );
+        })}
+        {/* Marker */}
+        <div
+          className="absolute top-0 bottom-0 w-0.5 bg-white shadow-md"
+          style={{ left: `${pct}%`, transform: "translateX(-50%)" }}
+        />
+      </div>
+      <div className="relative h-4">
+        <div className="absolute text-xs font-mono font-bold text-foreground" style={{ left: `${pct}%`, transform: "translateX(-50%)" }}>
+          {bmi.toFixed(1)}
+        </div>
+      </div>
+      <div className="flex text-[10px] text-muted justify-between px-0.5">
+        <span>10</span><span>18.5</span><span>25</span><span>30</span><span>45</span>
+      </div>
+    </div>
+  );
+}
+
 export default function BmiPage() {
   const [unit, setUnit] = useState<"imperial" | "metric">("imperial");
   const [weight, setWeight] = useState("");
@@ -67,10 +108,11 @@ export default function BmiPage() {
         )}
 
         {bmi && category && (
-          <div className="bg-primary-light rounded-xl p-4 text-center space-y-1">
+          <div className="bg-primary-light rounded-xl p-4 text-center space-y-3">
             <span className="block text-sm text-muted">Your BMI</span>
             <span className="block font-mono font-bold text-3xl">{bmi.toFixed(1)}</span>
             <span className={`block text-sm font-semibold ${category.color}`}>{category.label}</span>
+            <BmiScale bmi={bmi} />
           </div>
         )}
 
