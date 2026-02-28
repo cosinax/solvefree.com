@@ -16,12 +16,12 @@ export const metadata: Metadata = {
 };
 
 const calculators = [
-  { title: "GPA Calculator", description: "Calculate GPA from course grades and credit hours", href: "/education/gpa", icon: "🎓" },
-  { title: "GRE Score Calculator", description: "Convert GRE raw scores to scaled scores and percentiles", href: "/education/gre-score", icon: "📝" },
-  { title: "SAT Score Calculator", description: "Estimate SAT score and percentile from section scores", href: "/education/sat-score", icon: "📊" },
-  { title: "Study Time Calculator", description: "Plan study hours based on exam difficulty and available time", href: "/education/study-time", icon: "📚" },
-  { title: "Reading Level Calculator", description: "Assess reading difficulty using Flesch-Kincaid formula", href: "/education/reading-level", icon: "📖" },
-  { title: "Student-Teacher Ratio", description: "Calculate class size and student-to-teacher ratios", href: "/education/student-teacher-ratio", icon: "🏫" },
+  { title: "GPA Calculator", description: "Calculate GPA from course grades and credit hours", href: "/education/gpa", icon: "graduation-cap" },
+  { title: "GRE Score Calculator", description: "Convert GRE raw scores to scaled scores and percentiles", href: "/education/gre-score", icon: "file-text" },
+  { title: "SAT Score Calculator", description: "Estimate SAT score and percentile from section scores", href: "/education/sat-score", icon: "bar-chart" },
+  { title: "Study Time Calculator", description: "Plan study hours based on exam difficulty and available time", href: "/education/study-time", icon: "book-open" },
+  { title: "Reading Level Calculator", description: "Assess reading difficulty using Flesch-Kincaid formula", href: "/education/reading-level", icon: "book-open" },
+  { title: "Student-Teacher Ratio", description: "Calculate class size and student-to-teacher ratios", href: "/education/student-teacher-ratio", icon: "building-2" },
 ];
 
 export default function EducationPage() {

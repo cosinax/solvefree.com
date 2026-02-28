@@ -16,16 +16,16 @@ export const metadata: Metadata = {
 };
 
 const calculators = [
-  { title: "Normal Distribution", description: "PDF, CDF, and z-score lookup for the normal distribution", href: "/statistics/normal-distribution", icon: "📊" },
-  { title: "Confidence Interval", description: "Confidence interval for a proportion or mean", href: "/statistics/confidence-interval", icon: "🎯" },
-  { title: "Z-Score Calculator", description: "Convert between raw scores and z-scores", href: "/statistics/z-score", icon: "📈" },
-  { title: "Combination & Permutation", description: "Count combinations C(n,r) and permutations P(n,r)", href: "/statistics/combination-permutation", icon: "🔢" },
-  { title: "Probability Calculator", description: "AND, OR, conditional probability and basic events", href: "/statistics/probability", icon: "🎲" },
-  { title: "Binomial Distribution", description: "Binomial probability P(X=k), CDF, mean, and variance", href: "/statistics/binomial-distribution", icon: "📉" },
-  { title: "Poisson Distribution", description: "Poisson probability for rare events", href: "/statistics/poisson-distribution", icon: "⚡" },
-  { title: "5-Number Summary", description: "Min, Q1, median, Q3, max, IQR, and outlier detection", href: "/statistics/five-number-summary", icon: "📋" },
-  { title: "Standard Deviation", description: "Sample and population std dev, variance, and mean", href: "/statistics/standard-deviation", icon: "〰️" },
-  { title: "Margin of Error", description: "Calculate margin of error for surveys and polls", href: "/statistics/margin-of-error", icon: "±" },
+  { title: "Normal Distribution", description: "PDF, CDF, and z-score lookup for the normal distribution", href: "/statistics/normal-distribution", icon: "bar-chart" },
+  { title: "Confidence Interval", description: "Confidence interval for a proportion or mean", href: "/statistics/confidence-interval", icon: "target" },
+  { title: "Z-Score Calculator", description: "Convert between raw scores and z-scores", href: "/statistics/z-score", icon: "trending-up" },
+  { title: "Combination & Permutation", description: "Count combinations C(n,r) and permutations P(n,r)", href: "/statistics/combination-permutation", icon: "hash" },
+  { title: "Probability Calculator", description: "AND, OR, conditional probability and basic events", href: "/statistics/probability", icon: "dice" },
+  { title: "Binomial Distribution", description: "Binomial probability P(X=k), CDF, mean, and variance", href: "/statistics/binomial-distribution", icon: "trending-down" },
+  { title: "Poisson Distribution", description: "Poisson probability for rare events", href: "/statistics/poisson-distribution", icon: "zap" },
+  { title: "5-Number Summary", description: "Min, Q1, median, Q3, max, IQR, and outlier detection", href: "/statistics/five-number-summary", icon: "clipboard" },
+  { title: "Standard Deviation", description: "Sample and population std dev, variance, and mean", href: "/statistics/standard-deviation", icon: "waves" },
+  { title: "Margin of Error", description: "Calculate margin of error for surveys and polls", href: "/statistics/margin-of-error", icon: "sliders" },
 ];
 
 export default function StatisticsPage() {

@@ -16,16 +16,16 @@ export const metadata: Metadata = {
 };
 
 const calculators = [
-  { title: "Right Triangle", description: "Sides, angles, area, and perimeter using Pythagorean theorem", href: "/geometry/right-triangle", icon: "📐" },
-  { title: "Triangle Calculator", description: "Solve any triangle from SSS, SAS, ASA, AAS, or SSA", href: "/geometry/triangle", icon: "🔺" },
-  { title: "Circle Calculator", description: "Area, circumference, arc length, and sector area", href: "/geometry/circle", icon: "⭕" },
-  { title: "Pythagorean Theorem", description: "Find any side of a right triangle from the other two", href: "/geometry/pythagorean-theorem", icon: "📏" },
-  { title: "Trapezoid Calculator", description: "Area, perimeter, and height of a trapezoid", href: "/geometry/trapezoid", icon: "🔷" },
-  { title: "Parallelogram", description: "Area, perimeter, diagonal, and height of a parallelogram", href: "/geometry/parallelogram", icon: "▱" },
-  { title: "Regular Polygon", description: "Area and perimeter of any regular polygon (3–20 sides)", href: "/geometry/regular-polygon", icon: "⬡" },
-  { title: "Ellipse Calculator", description: "Area, perimeter (approximation), and foci of an ellipse", href: "/geometry/ellipse", icon: "〇" },
-  { title: "Arc Length", description: "Arc length and sector area from radius and central angle", href: "/geometry/arc-length", icon: "↗️" },
-  { title: "Slope Calculator", description: "Slope, distance, midpoint, and equation of a line", href: "/geometry/slope", icon: "📈" },
+  { title: "Right Triangle", description: "Sides, angles, area, and perimeter using Pythagorean theorem", href: "/geometry/right-triangle", icon: "ruler" },
+  { title: "Triangle Calculator", description: "Solve any triangle from SSS, SAS, ASA, AAS, or SSA", href: "/geometry/triangle", icon: "triangle" },
+  { title: "Circle Calculator", description: "Area, circumference, arc length, and sector area", href: "/geometry/circle", icon: "circle" },
+  { title: "Pythagorean Theorem", description: "Find any side of a right triangle from the other two", href: "/geometry/pythagorean-theorem", icon: "ruler" },
+  { title: "Trapezoid Calculator", description: "Area, perimeter, and height of a trapezoid", href: "/geometry/trapezoid", icon: "hexagon" },
+  { title: "Parallelogram", description: "Area, perimeter, diagonal, and height of a parallelogram", href: "/geometry/parallelogram", icon: "square" },
+  { title: "Regular Polygon", description: "Area and perimeter of any regular polygon (3–20 sides)", href: "/geometry/regular-polygon", icon: "hexagon" },
+  { title: "Ellipse Calculator", description: "Area, perimeter (approximation), and foci of an ellipse", href: "/geometry/ellipse", icon: "circle" },
+  { title: "Arc Length", description: "Arc length and sector area from radius and central angle", href: "/geometry/arc-length", icon: "trending-up" },
+  { title: "Slope Calculator", description: "Slope, distance, midpoint, and equation of a line", href: "/geometry/slope", icon: "trending-up" },
 ];
 
 export default function GeometryPage() {

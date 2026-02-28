@@ -8,6 +8,7 @@ export interface Calculator {
 
 export const allCalculators: Calculator[] = [
   // Math (12)
+  { title: "Greek Alphabet", description: "Greek letters, LaTeX symbols, and uses in math and physics", href: "/math/greek-alphabet", icon: "sigma", category: "Math" },
   { title: "General Calculator", description: "Type expressions naturally — no buttons needed", href: "/math/general", icon: "calculator", category: "Math" },
   { title: "Button Calculator", description: "Classic button-style calculator", href: "/math/button-calculator", icon: "grid-2x2", category: "Math" },
   { title: "Scientific Calculator", description: "Trig, logs, powers, roots, and constants", href: "/math/scientific", icon: "function-square", category: "Math" },
@@ -122,6 +123,7 @@ export const allCalculators: Calculator[] = [
   { title: "Height Percentile (CDC)", description: "Child height percentile from CDC growth charts", href: "/health/height-percentile", icon: "chart-bar", category: "Health" },
   { title: "Bra Size Calculator", description: "Find your bra size from measurements and convert between US, UK, EU, FR, AU", href: "/health/bra-size", icon: "scan", category: "Health" },
   // Conversions (13)
+  { title: "SI Prefixes", description: "Metric prefix reference: kilo, mega, giga + binary IEC prefixes", href: "/conversions/si-prefixes", icon: "layers", category: "Conversions" },
   { title: "Length Converter", description: "Miles, km, feet, meters, inches", href: "/conversions/length", icon: "arrow-left-right", category: "Conversions" },
   { title: "Weight Converter", description: "Pounds, kg, ounces, grams, stones", href: "/conversions/weight", icon: "scale", category: "Conversions" },
   { title: "Temperature Converter", description: "Fahrenheit, Celsius, Kelvin", href: "/conversions/temperature", icon: "thermometer", category: "Conversions" },
@@ -153,6 +155,8 @@ export const allCalculators: Calculator[] = [
   { title: "Unix Timestamp", description: "Convert timestamps and dates", href: "/timers/unix-timestamp", icon: "terminal", category: "Timers" },
   { title: "Time Zone Converter", description: "Convert between time zones", href: "/timers/timezone", icon: "clock", category: "Timers" },
   // Computer (15)
+  { title: "HTTP Status Codes", description: "Quick reference for all HTTP response status codes", href: "/computer/http-status-codes", icon: "server", category: "Computer" },
+  { title: "Binary / Hex Table", description: "0–255 in decimal, hex, binary, octal, and ASCII", href: "/computer/binary-table", icon: "binary", category: "Computer" },
   { title: "Color Converter", description: "Convert HEX, RGB, HSL colors", href: "/computer/color-converter", icon: "palette", category: "Computer" },
   { title: "JSON Formatter", description: "Format, validate, minify JSON", href: "/computer/json-formatter", icon: "file-json", category: "Computer" },
   { title: "Regex Tester", description: "Test regular expressions live", href: "/computer/regex-tester", icon: "search-code", category: "Computer" },
@@ -240,6 +244,7 @@ export const allCalculators: Calculator[] = [
   { title: "Generation Calculator", description: "Which generation are you? Boomer, Millennial, Gen Z…", href: "/everyday/generation", icon: "users", category: "Everyday" },
   { title: "Helium Balloons Calculator", description: "How many balloons to lift any object", href: "/everyday/helium-balloons", icon: "party-popper", category: "Everyday" },
   // Network (8)
+  { title: "IPv6 Address Tool", description: "Expand, compress, and analyze IPv6 addresses. IPv4-mapped conversion.", href: "/network/ipv6-converter", icon: "globe", category: "Network" },
   { title: "Bandwidth Calculator", description: "File transfer time from speed and file size", href: "/network/bandwidth", icon: "wifi", category: "Network" },
   { title: "TCP Throughput", description: "Max TCP throughput from window size and RTT", href: "/network/tcp-throughput", icon: "network", category: "Network" },
   { title: "CIDR Range Visualizer", description: "Subnet range, hosts, and mask from CIDR", href: "/network/cidr-range", icon: "server", category: "Network" },
@@ -286,7 +291,10 @@ export const allCalculators: Calculator[] = [
   { title: "Noise Figure & Temperature", description: "Noise figure, noise temperature, and Friis cascaded NF", href: "/rf/noise-figure", icon: "thermometer", category: "RF & Antenna" },
   { title: "Skin Depth Calculator", description: "RF skin depth in conductors by frequency and material", href: "/rf/skin-depth", icon: "layers", category: "RF & Antenna" },
   { title: "Coaxial Cable Parameters", description: "Impedance, capacitance, inductance, and velocity factor", href: "/rf/coax-calculator", icon: "circle", category: "RF & Antenna" },
-  // Space (12)
+  // Space (15)
+  { title: "Relativistic Rocket Travel", description: "Ship time vs. Earth time for constant-acceleration interstellar travel", href: "/space/relativistic-travel", icon: "rocket", category: "Space" },
+  { title: "Velocity Time Dilation", description: "Lorentz factor γ and time dilation for motion at relativistic speeds", href: "/space/time-dilation", icon: "clock-4", category: "Space" },
+  { title: "Relativistic Velocity & Momentum", description: "Relativistic velocity addition, momentum, kinetic energy, and Doppler", href: "/space/relativistic-velocity", icon: "fast-forward", category: "Space" },
   { title: "Orbital Period", description: "T = 2π√(a³/GM) — period from orbit radius and central mass", href: "/space/orbital-period", icon: "satellite", category: "Space" },
   { title: "Escape Velocity", description: "Minimum speed to escape a body's gravity well", href: "/space/escape-velocity", icon: "rocket", category: "Space" },
   { title: "Rocket Equation", description: "Tsiolkovsky Δv = Isp × g₀ × ln(m₀/mf)", href: "/space/rocket-equation", icon: "rocket", category: "Space" },

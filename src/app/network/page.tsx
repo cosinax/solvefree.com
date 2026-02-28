@@ -16,14 +16,15 @@ export const metadata: Metadata = {
 };
 
 const calculators = [
-  { title: "Bandwidth Calculator", description: "File transfer time from speed and file size", href: "/network/bandwidth", icon: "📡" },
-  { title: "TCP Throughput", description: "Max throughput from window size and RTT", href: "/network/tcp-throughput", icon: "📊" },
-  { title: "CIDR Range Visualizer", description: "Subnet range, hosts, and mask from CIDR", href: "/network/cidr-range", icon: "🗺️" },
-  { title: "Subnet Cheat Sheet", description: "CIDR prefixes, masks, host counts at a glance", href: "/network/subnet-cheatsheet", icon: "🕸️" },
-  { title: "Packet Loss Impact", description: "How packet loss degrades TCP throughput", href: "/network/packet-loss", icon: "📉" },
-  { title: "Latency Calculator", description: "Theoretical minimum latency by distance", href: "/network/latency-calculator", icon: "⏱️" },
-  { title: "WiFi Channel Reference", description: "2.4 GHz & 5 GHz channels and frequencies", href: "/network/wifi-channels", icon: "📶" },
-  { title: "Common Port Reference", description: "Well-known TCP/UDP port numbers", href: "/network/port-reference", icon: "🔌" },
+  { title: "IPv6 Address Tool", description: "Expand, compress, and analyze IPv6 addresses. IPv4-mapped conversion.", href: "/network/ipv6-converter", icon: "globe" },
+  { title: "Bandwidth Calculator", description: "File transfer time from speed and file size", href: "/network/bandwidth", icon: "satellite" },
+  { title: "TCP Throughput", description: "Max throughput from window size and RTT", href: "/network/tcp-throughput", icon: "bar-chart" },
+  { title: "CIDR Range Visualizer", description: "Subnet range, hosts, and mask from CIDR", href: "/network/cidr-range", icon: "globe" },
+  { title: "Subnet Cheat Sheet", description: "CIDR prefixes, masks, host counts at a glance", href: "/network/subnet-cheatsheet", icon: "network" },
+  { title: "Packet Loss Impact", description: "How packet loss degrades TCP throughput", href: "/network/packet-loss", icon: "trending-down" },
+  { title: "Latency Calculator", description: "Theoretical minimum latency by distance", href: "/network/latency-calculator", icon: "timer" },
+  { title: "WiFi Channel Reference", description: "2.4 GHz & 5 GHz channels and frequencies", href: "/network/wifi-channels", icon: "signal" },
+  { title: "Common Port Reference", description: "Well-known TCP/UDP port numbers", href: "/network/port-reference", icon: "plug" },
 ];
 
 export default function NetworkPage() {

@@ -26,7 +26,7 @@ const PRIMARY = ["Math", "Finance", "Health", "Conversions", "Timers", "Computer
 
 function Logo() {
   return (
-    <svg width="130" height="28" viewBox="0 0 130 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="SolveFree">
+    <svg width="118" height="28" viewBox="0 0 118 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="SolveFree">
       <rect width="28" height="28" rx="6" fill="#2563eb"/>
       <circle cx="9.5" cy="9.5" r="2.2" fill="white"/>
       <circle cx="18.5" cy="9.5" r="2.2" fill="white"/>
@@ -34,7 +34,7 @@ function Logo() {
       <rect x="17.25" y="17.75" width="2.5" height="1.5" rx="0.6" fill="white"/>
       <rect x="18.25" y="16.75" width="1.5" height="3.5" rx="0.6" fill="white"/>
       <text x="34" y="20" fontFamily="system-ui, -apple-system, sans-serif" fontSize="15" fontWeight="700" fill="currentColor">Solve</text>
-      <text x="80" y="20" fontFamily="system-ui, -apple-system, sans-serif" fontSize="15" fontWeight="700" fill="#2563eb">Free</text>
+      <text x="74" y="20" fontFamily="system-ui, -apple-system, sans-serif" fontSize="15" fontWeight="700" fill="#2563eb">Free</text>
     </svg>
   );
 }

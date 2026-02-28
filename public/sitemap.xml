@@ -109,6 +109,12 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://solvefree.com/math/greek-alphabet</loc>
+    <lastmod>2026-02-28</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://solvefree.com/math/general</loc>
     <lastmod>2026-02-28</lastmod>
     <priority>0.7</priority>
@@ -775,6 +781,12 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://solvefree.com/conversions/si-prefixes</loc>
+    <lastmod>2026-02-28</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://solvefree.com/conversions/length</loc>
     <lastmod>2026-02-28</lastmod>
     <priority>0.7</priority>
@@ -944,6 +956,18 @@
   </url>
   <url>
     <loc>https://solvefree.com/timers/timezone</loc>
+    <lastmod>2026-02-28</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/computer/http-status-codes</loc>
+    <lastmod>2026-02-28</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/computer/binary-table</loc>
     <lastmod>2026-02-28</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
@@ -1447,6 +1471,12 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://solvefree.com/network/ipv6-converter</loc>
+    <lastmod>2026-02-28</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://solvefree.com/network/bandwidth</loc>
     <lastmod>2026-02-28</lastmod>
     <priority>0.7</priority>
@@ -1700,6 +1730,24 @@
   </url>
   <url>
     <loc>https://solvefree.com/rf/coax-calculator</loc>
+    <lastmod>2026-02-28</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/space/relativistic-travel</loc>
+    <lastmod>2026-02-28</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/space/time-dilation</loc>
+    <lastmod>2026-02-28</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/space/relativistic-velocity</loc>
     <lastmod>2026-02-28</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>

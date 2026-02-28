@@ -16,18 +16,18 @@ export const metadata: Metadata = {
 };
 
 const calculators = [
-  { title: "Token Estimator", description: "Estimate token count for LLM input text", href: "/ai/token-estimator", icon: "🪙" },
-  { title: "AI API Cost Calculator", description: "Estimate OpenAI, Anthropic, Google API costs", href: "/ai/api-cost", icon: "💰" },
-  { title: "Model Size Calculator", description: "Estimate GPU memory for model parameters", href: "/ai/model-size", icon: "🧠" },
-  { title: "Confusion Matrix", description: "Calculate precision, recall, F1 from a confusion matrix", href: "/ai/confusion-matrix", icon: "🎯" },
-  { title: "FLOPS Calculator", description: "Estimate compute (FLOPS) for training/inference", href: "/ai/flops", icon: "⚡" },
-  { title: "Training Time Estimator", description: "Estimate training time from dataset and hardware", href: "/ai/training-time", icon: "⏱️" },
-  { title: "Perplexity Calculator", description: "Calculate perplexity from cross-entropy loss", href: "/ai/perplexity", icon: "🔀" },
-  { title: "Embedding Dimensions", description: "Estimate optimal embedding dimensions", href: "/ai/embedding-dimensions", icon: "📐" },
-  { title: "Batch Size Calculator", description: "Optimal batch size for GPU memory", href: "/ai/batch-size", icon: "🗄️" },
-  { title: "Learning Rate Finder", description: "Suggested learning rates by model size", href: "/ai/learning-rate", icon: "📈" },
-  { title: "Image Resolution", description: "Calculate pixel count, aspect ratio, and memory", href: "/ai/image-resolution", icon: "🖼️" },
-  { title: "Softmax Calculator", description: "Apply softmax function to a set of values", href: "/ai/softmax", icon: "📊" },
+  { title: "Token Estimator", description: "Estimate token count for LLM input text", href: "/ai/token-estimator", icon: "coins" },
+  { title: "AI API Cost Calculator", description: "Estimate OpenAI, Anthropic, Google API costs", href: "/ai/api-cost", icon: "banknote" },
+  { title: "Model Size Calculator", description: "Estimate GPU memory for model parameters", href: "/ai/model-size", icon: "brain" },
+  { title: "Confusion Matrix", description: "Calculate precision, recall, F1 from a confusion matrix", href: "/ai/confusion-matrix", icon: "target" },
+  { title: "FLOPS Calculator", description: "Estimate compute (FLOPS) for training/inference", href: "/ai/flops", icon: "zap" },
+  { title: "Training Time Estimator", description: "Estimate training time from dataset and hardware", href: "/ai/training-time", icon: "timer" },
+  { title: "Perplexity Calculator", description: "Calculate perplexity from cross-entropy loss", href: "/ai/perplexity", icon: "sliders" },
+  { title: "Embedding Dimensions", description: "Estimate optimal embedding dimensions", href: "/ai/embedding-dimensions", icon: "ruler" },
+  { title: "Batch Size Calculator", description: "Optimal batch size for GPU memory", href: "/ai/batch-size", icon: "database" },
+  { title: "Learning Rate Finder", description: "Suggested learning rates by model size", href: "/ai/learning-rate", icon: "trending-up" },
+  { title: "Image Resolution", description: "Calculate pixel count, aspect ratio, and memory", href: "/ai/image-resolution", icon: "camera" },
+  { title: "Softmax Calculator", description: "Apply softmax function to a set of values", href: "/ai/softmax", icon: "bar-chart" },
 ];
 
 export default function AIPage() {
