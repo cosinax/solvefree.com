@@ -143,6 +143,7 @@ export const allCalculators: Calculator[] = [
   { title: "mg to mL Converter", description: "Milligrams to milliliters using liquid density", href: "/conversions/mg-to-ml", icon: "beaker", category: "Conversions" },
   { title: "Precious Metals Weight", description: "Troy oz, pennyweight, grains, grams for gold and silver", href: "/conversions/gold-weight", icon: "gem", category: "Conversions" },
   // Timers (8)
+  { title: "Clock", description: "Analog and digital clock with timezone info", href: "/timers/clock", icon: "clock", category: "Timers" },
   { title: "Timer & Stopwatch", description: "Countdown and stopwatch with laps", href: "/timers/timer", icon: "timer", category: "Timers" },
   { title: "Pomodoro Timer", description: "25/5 work/break intervals", href: "/timers/pomodoro", icon: "alarm-clock", category: "Timers" },
   { title: "World Clock", description: "Current time in cities worldwide", href: "/timers/world-clock", icon: "globe-2", category: "Timers" },
@@ -220,6 +221,7 @@ export const allCalculators: Calculator[] = [
   { title: "Commute Cost", description: "Daily commute expenses", href: "/everyday/commute", icon: "bus", category: "Everyday" },
   { title: "Dilution Calculator", description: "Dilution ratios for solutions", href: "/everyday/dilution", icon: "flask", category: "Everyday" },
   { title: "Photography", description: "DoF, FoV, hyperfocal distance", href: "/everyday/photography", icon: "camera", category: "Everyday" },
+  { title: "Monitor PPI", description: "Pixels per inch for any screen size", href: "/everyday/monitor-ppi", icon: "monitor", category: "Everyday" },
   { title: "Reading Time Estimator", description: "How long to read or speak any text", href: "/everyday/reading-time", icon: "book-open", category: "Everyday" },
   { title: "Recipe Scaler", description: "Scale recipe ingredients to any servings", href: "/everyday/recipe-scaler", icon: "utensils", category: "Everyday" },
   { title: "Typing Speed Calculator", description: "Calculate WPM from word count and time", href: "/everyday/typing-speed", icon: "keyboard", category: "Everyday" },

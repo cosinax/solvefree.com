@@ -18,6 +18,12 @@ export const metadata: Metadata = {
 
 const calculators = [
   {
+    title: "Clock",
+    description: "Current local time with analog and digital display",
+    href: "/timers/clock",
+    icon: "🕐",
+  },
+  {
     title: "Timer & Stopwatch",
     description: "Countdown timer and stopwatch with lap times",
     href: "/timers/timer",

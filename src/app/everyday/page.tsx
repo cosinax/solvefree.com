@@ -33,6 +33,7 @@ const calculators = [
   { title: "Commute Cost", description: "Calculate your daily commute cost", href: "/everyday/commute", icon: "🚌" },
   { title: "Dilution Calculator", description: "Calculate dilution ratios for solutions", href: "/everyday/dilution", icon: "🧴" },
   { title: "Photography", description: "Depth of field, exposure, and print sizes", href: "/everyday/photography", icon: "📷" },
+  { title: "Monitor PPI", description: "Pixels per inch for any screen size and resolution", href: "/everyday/monitor-ppi", icon: "🖥️" },
   { title: "Reading Time", description: "How long to read or speak any text", href: "/everyday/reading-time", icon: "📖" },
   { title: "Recipe Scaler", description: "Scale recipe ingredients to any serving size", href: "/everyday/recipe-scaler", icon: "👨‍🍳" },
   { title: "Typing Speed", description: "Calculate WPM from word count and time", href: "/everyday/typing-speed", icon: "⌨️" },

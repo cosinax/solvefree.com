@@ -895,6 +895,12 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://solvefree.com/timers/clock</loc>
+    <lastmod>2026-02-28</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://solvefree.com/timers/timer</loc>
     <lastmod>2026-02-28</lastmod>
     <priority>0.7</priority>
@@ -1328,6 +1334,12 @@
   </url>
   <url>
     <loc>https://solvefree.com/everyday/photography</loc>
+    <lastmod>2026-02-28</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://solvefree.com/everyday/monitor-ppi</loc>
     <lastmod>2026-02-28</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
